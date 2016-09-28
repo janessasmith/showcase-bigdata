@@ -1,0 +1,98 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>成都热点分布</title>
+
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <!-- 引入日历css -->
+    <link rel="stylesheet" type="text/css" href="lib/lyz.calendar.css">
+    <script type="text/javascript" src="lib/jquery-1.11.1.min.js"></script>
+    <!-- 引入日历echarts -->
+    <script type="text/javascript" src="lib/echarts-all.js"></script>
+    <!-- 引入日历js -->
+    <script type="text/javascript" src="lib/lyz.calendar.min.js"></script>
+    <!-- 引入翻页js -->
+    <script type="text/javascript" src="lib/jqPaginator.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+    <div class="hot-item">
+        <div class="cd-rd-header">
+            <h1>成都热点分布</h1>
+        </div>
+        <div class="content">
+            <div class="list-left">
+                <!-- 成都市地图 -->
+                <div class="map" style="position: absolute;top: 96px;left: 5%;">
+                    <div class="map-container" id="chengduMapContainer"></div>
+                </div>
+            </div>
+            <div class="list-right">
+                <!-- 热点信息展示 -->
+                <div class="news-list">
+                    <div class="rd-num-rank">
+                        <div class="rd-num-tit">
+                            <h3>成都热点信息</h3>
+                            <!-- 日历 -->
+                            <div class="rd-date-sel">
+                                <input class="date-icon" id="chengduDateTimePicker">
+                            </div>
+                            <div class="rd-date-btn" id="chengduTimeBtn">
+                                <!--<div class="selected"><span>1日</span></div>
+                                <div><span>3日</span></div>
+                                <div><span>7日</span></div>-->
+                            </div>
+                        </div>
+                        <!-- 四个角图标样式 -->
+                        <div class="rd-num-con">
+                            <span class="icon01"></span>
+                            <span class="icon02"></span>
+                            <span class="icon03"></span>
+                            <span class="icon04"></span>
+                        </div>
+                        <div class="rd-num-top">
+                            <div class="cd-rd-num">
+                                <img src="images/cb-rd-icon03.png" width="34" height="39" alt=""/>
+                                <span id="chengduNewsAreaName">成都热点</span>
+                            </div>
+                            <div class="cd-rz-num">
+                                <img src="images/cb-rd-icon04.png" width="34" height="39" alt=""/>
+                                <span>热值</span>
+                            </div>
+                        </div>
+                        <!-- 热点列表 -->
+                        <div class="news-container" id="chengduNewsContainer">
+                            <!--<div class="news-item">
+                                <div class="news-content">
+                                    <a href="#" target="_blank" title="">王毅</a>
+                                </div>
+                                <div class="news-visits">
+                                    <span>198</span>
+                                </div>
+                            </div>
+                            <div class="news-item news-bg-blue">
+                                <div class="news-content">
+                                    <a href="#" target="_blank" title="">中方</a>
+                                </div>
+                            </div>-->
+                        </div>
+                    </div>
+                </div>
+                <!-- 成都趋势柱状图 -->
+                <div class="trend-chart">
+                    <div class="title">成都热点近一周TOP4趋势图</div>
+                    <div class="trend-chart-container" id="chengduTendencyChartContainer"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cd-footer-lf"></div>
+    <div class="cd-footer-rt"></div>
+    <script type="text/javascript" src="js/screen/init.js"></script>
+    <script type="text/javascript" src="js/core/map.js"></script>
+    <script type="text/javascript" src="js/core/chart.js"></script>
+    <script type="text/javascript" src="js/screen/startup-chengdu.js"></script>
+</div>
+</body>
+</html>

@@ -1,0 +1,202 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>全国热点分布</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <!-- 引入日历css -->
+    <link rel="stylesheet" type="text/css" href="lib/lyz.calendar.css">
+    <script type="text/javascript" src="lib/jquery-1.11.1.min.js"></script>
+    <!-- 引入日历echarts -->
+    <script type="text/javascript" src="lib/echarts-all.js"></script>
+    <!-- 引入日历js -->
+    <script type="text/javascript" src="lib/lyz.calendar.min.js"></script>
+    <!-- 引入翻页js -->
+    <script type="text/javascript" src="lib/jqPaginator.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="hot-item">
+            <div class="cd-rd-header">
+                <h1>全国热点分布</h1>
+            </div>
+            <div class="content">
+                <div class="list-left">
+                    <!-- 全国地图 -->
+                    <div class="map map-china">
+                        <div class="map-container" id="quanGuoMapContainer"></div>
+                    </div>
+                    <!-- 地域统计 -->
+                    <div class="province-list">
+                        <div class="title">
+                            <span class="quanGuoCurTime"></span>
+                            <span>地域统计</span>
+                        </div>
+                        <div class="province-list-content">
+                            <div class="province-list-item">
+                                <div><span>排序</span></div>
+                                <div><span>地域</span></div>
+                                <div><span>热度值</span></div>
+                            </div>
+                            <div id="quanGuoProvinceListItems" style="display: inline-block;">
+                                <!--<div class="province-list-item">
+                                    <div><span class="province-list-num">1</span></div>
+                                    <div class="province-list-item-bg"><span>北京</span></div>
+                                    <div class="province-list-item-bcRc">
+                                        <span class="province-list-item-rcTotal">1023</span>
+                                    </div>
+                                </div>
+                                <div class="province-list-item">
+                                    <div><span class="province-list-num">2</span></div>
+                                    <div class="province-list-item-bg"><span>广东省</span></div>
+                                    <div class="province-list-item-bcRc">
+                                        <span class="province-list-item-rcTotal">449</span>
+                                    </div>
+                                </div>
+                                <div class="province-list-item">
+                                    <div><span class="province-list-num">3</span></div>
+                                    <div class="province-list-item-bg"><span>上海市</span></div>
+                                    <div class="province-list-item-bcRc">
+                                        <span class="province-list-item-rcTotal">388</span>
+                                    </div>
+                                </div>
+                                <div class="province-list-item">
+                                    <div><span class="province-list-num">4</span></div>
+                                    <div class="province-list-item-bg"><span>四川省</span></div>
+                                    <div class="province-list-item-bcRc">
+                                        <span class="province-list-item-rcTotal">282</span>
+                                    </div>
+                                </div>
+                                <div class="province-list-item">
+                                    <div><span class="province-list-num">5</span></div>
+                                    <div class="province-list-item-bg"><span>浙江省</span></div>
+                                    <div class="province-list-item-bcRc">
+                                        <span class="province-list-item-rcTotal">256</span>
+                                    </div>
+                                </div>
+                                <div class="province-list-item">
+                                    <div><span class="province-list-num">6</span></div>
+                                    <div class="province-list-item-bg"><span>山东省</span></div>
+                                    <div class="province-list-item-bcRc">
+                                        <span class="province-list-item-rcTotal">226</span>
+                                    </div>
+                                </div>
+                                <div class="province-list-item">
+                                    <div><span class="province-list-num">7</span></div>
+                                    <div class="province-list-item-bg"><span>辽宁省</span></div>
+                                    <div class="province-list-item-bcRc">
+                                        <span class="province-list-item-rcTotal">201</span>
+                                    </div>
+                                </div>
+                                <div class="province-list-item">
+                                    <div><span class="province-list-num">8</span></div>
+                                    <div class="province-list-item-bg"><span>河北省</span></div>
+                                    <div class="province-list-item-bcRc">
+                                        <span class="province-list-item-rcTotal">192</span>
+                                    </div>
+                                </div>
+                                <div class="province-list-item">
+                                    <div><span class="province-list-num">9</span></div>
+                                    <div class="province-list-item-bg"><span>江苏省</span></div>
+                                    <div class="province-list-item-bcRc">
+                                        <span class="province-list-item-rcTotal">187</span>
+                                    </div>
+                                </div>
+                                <div class="province-list-item">
+                                    <div><span class="province-list-num">10</span></div>
+                                    <div class="province-list-item-bg"><span>天津市</span></div>
+                                    <div class="province-list-item-bcRc">
+                                        <span class="province-list-item-rcTotal">158</span>
+                                    </div>
+                                </div>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="list-right">
+                    <!-- 热点信息展示 -->
+                    <div class="news-list">
+                        <div class="rd-num-rank">
+                            <div class="rd-num-tit">
+                                <h3>全国热点信息</h3>
+                                <!-- 日历 -->
+                                <div class="rd-date-sel">
+                                    <input class="date-icon" id="quanGuoDateTimePicker">
+                                </div>
+                                <div class="rd-date-btn" id="quanGuoTimeBtn">
+                                    <!--<div class="selected"><span>1日</span></div>
+                                    <div><span>3日</span></div>
+                                    <div><span>7日</span></div>-->
+                                </div>
+                            </div>
+                            <!-- 四个角图标样式 -->
+                            <div class="rd-num-con">
+                                <span class="icon01"></span>
+                                <span class="icon02"></span>
+                                <span class="icon03"></span>
+                                <span class="icon04"></span>
+                            </div>
+                            <div class="rd-num-top">
+                                <div class="cd-rd-num">
+                                    <img src="images/cb-rd-icon03.png" width="34" height="39" alt=""/>
+                                    <span id="quanGuoNewsAreaName">全国热点</span>
+                                </div>
+                                <div class="cd-rz-num">
+                                    <img src="images/cb-rd-icon04.png" width="34" height="39" alt=""/>
+                                    <span>热值</span>
+                                </div>
+                            </div>
+                            <!-- 热点列表 -->
+                            <div class="news-container" id="quanGuoNewsContainer">
+                                <!--<div class="news-item">
+                                    <div class="news-content">
+                                        <a href="#" target="_blank" title="">王毅</a>
+                                    </div>
+                                    <div class="news-visits">
+                                        <span>198</span>
+                                    </div>
+                                </div>
+                                <div class="news-item news-bg-blue">
+                                    <div class="news-content">
+                                        <a href="#" target="_blank" title="">中方</a>
+                                    </div>
+                                </div>-->
+                            </div>
+                            <div class="news-page">
+                                <div class="news-page-inner" id="quanGuoNewsPage" >
+                                    <!--<div class="news-page-btn news-page-change">
+                                        <span class="left-page"></span>
+                                    </div>
+                                    <div class="news-page-btn new-page-div news-page-selected">
+                                        <span>1</span>
+                                    </div>
+                                    <div class="news-page-btn new-page-div">
+                                        <span>2</span>
+                                    </div>
+                                    <div class="news-page-btn new-page-div">
+                                        <span>3</span>
+                                    </div>
+                                    <div class="news-page-btn news-page-change">
+                                        <span class="right-page"></span>
+                                    </div>-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 趋势柱状图 -->
+                    <div class="trend-chart">
+                        <div class="title">全国热点近一周TOP4趋势图</div>
+                        <div class="trend-chart-container" id="quanGuoTendencyChartContainer"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cd-footer-lf"></div>
+        <div class="cd-footer-rt"></div>
+        <script type="text/javascript" src="js/screen/init.js"></script>
+        <script type="text/javascript" src="js/core/map.js"></script>
+        <script type="text/javascript" src="js/core/chart.js"></script>
+        <script type="text/javascript" src="js/screen/startup-quanguo.js"></script>
+    </div>
+</body>
+</html>

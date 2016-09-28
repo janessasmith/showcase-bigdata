@@ -1,0 +1,72 @@
+[
+    {
+        "AREANAME": "北京市",
+        "INDEX": "1",
+        "AREA": "001004",
+        "HOTNUM": "1023",
+        "LOADDATE": "2016-07-26"
+    },
+    {
+        "AREANAME": "广东省",
+        "INDEX": "2",
+        "AREA": "001013",
+        "HOTNUM": "449",
+        "LOADDATE": "2016-07-26"
+    },
+    {
+        "AREANAME": "上海市",
+        "INDEX": "3",
+        "AREA": "001001",
+        "HOTNUM": "388",
+        "LOADDATE": "2016-07-26"
+    },
+    {
+        "AREANAME": "四川省",
+        "INDEX": "4",
+        "AREA": "001007",
+        "HOTNUM": "282",
+        "LOADDATE": "2016-07-26"
+    },
+    {
+        "AREANAME": "浙江省",
+        "INDEX": "5",
+        "AREA": "001020",
+        "HOTNUM": "256",
+        "LOADDATE": "2016-07-26"
+    },
+    {
+        "AREANAME": "山东省",
+        "INDEX": "6",
+        "AREA": "001011",
+        "HOTNUM": "226",
+        "LOADDATE": "2016-07-26"
+    },
+    {
+        "AREANAME": "辽宁省",
+        "INDEX": "7",
+        "AREA": "001029",
+        "HOTNUM": "201",
+        "LOADDATE": "2016-07-26"
+    },
+    {
+        "AREANAME": "河北省",
+        "INDEX": "8",
+        "AREA": "001018",
+        "HOTNUM": "192",
+        "LOADDATE": "2016-07-26"
+    },
+    {
+        "AREANAME": "江苏省",
+        "INDEX": "9",
+        "AREA": "001016",
+        "HOTNUM": "187",
+        "LOADDATE": "2016-07-26"
+    },
+    {
+        "AREANAME": "天津市",
+        "INDEX": "10",
+        "AREA": "001008",
+        "HOTNUM": "158",
+        "LOADDATE": "2016-07-26"
+    }
+]

@@ -1,0 +1,100 @@
+{
+    "SEVENTH": [
+        {
+            "ID": "374377",
+            "CLUSTER_NUMS": "2000"
+        },
+        {
+            "ID": "374378",
+            "CLUSTER_NUMS": "4000"
+        },
+        {
+            "ID": "374379",
+            "CLUSTER_NUMS": "1500"
+        }
+    ],
+    "SIXTH": [
+        {
+            "ID": "372169",
+            "CLUSTER_NUMS": "4785"
+        },
+        {
+            "ID": "372170",
+            "CLUSTER_NUMS": "500"
+        },
+        {
+            "ID": "372171",
+            "CLUSTER_NUMS": "3650"
+        }
+    ],
+    "FIFTH": [
+        {
+            "ID": "365729",
+            "CLUSTER_NUMS": "4600"
+        },
+        {
+            "ID": "365730",
+            "CLUSTER_NUMS": "3000"
+        },
+        {
+            "ID": "365731",
+            "CLUSTER_NUMS": "1800"
+        }
+    ],
+    "FOURTH": [
+        {
+            "ID": "360445",
+            "CLUSTER_NUMS": "3000"
+        },
+        {
+            "ID": "360446",
+            "CLUSTER_NUMS": "6000"
+        },
+        {
+            "ID": "360447",
+            "CLUSTER_NUMS": "1500"
+        }
+    ],
+    "THIRD": [
+        {
+            "ID": "356149",
+            "CLUSTER_NUMS": "3000"
+        },
+        {
+            "ID": "356150",
+            "CLUSTER_NUMS": "4000"
+        },
+        {
+            "ID": "356151",
+            "CLUSTER_NUMS": "2100"
+        }
+    ],
+    "SECOND": [
+        {
+            "ID": "352206",
+            "CLUSTER_NUMS": "2900"
+        },
+        {
+            "ID": "352207",
+            "CLUSTER_NUMS": "1000"
+        },
+        {
+            "ID": "352208",
+            "CLUSTER_NUMS": "4600"
+        }
+    ],
+    "FIRST": [
+        {
+            "ID": "346684",
+            "CLUSTER_NUMS": "4800"
+        },
+        {
+            "ID": "346685",
+            "CLUSTER_NUMS": "3200"
+        },
+        {
+            "ID": "346686",
+            "CLUSTER_NUMS": "2800"
+        }
+    ]
+}

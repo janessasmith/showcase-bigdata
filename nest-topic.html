@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>专题事件嵌套页面</title>
+
+    <!--引入CSS-->
+    <link rel="stylesheet" href="css/public.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <!-- 下拉CSS -->
+    <link rel="stylesheet" href="css/select.css"/>
+
+    <!--引入Script-->
+    <script type="text/javascript" src="lib/jquery-1.11.1.min.js"></script>
+    <!-- 引入日历Echarts -->
+    <script type="text/javascript" src="lib/echarts-all.js"></script>
+    <!-- 日历JS -->
+    <script type="text/javascript" src="laydate/laydate.js"></script>
+    <!-- 下拉JS -->
+    <script type="text/javascript" src="js/nest/select.js"></script>
+    <!-- 嵌套页面常规JS效果 -->
+    <script type="text/javascript" src="js/nest/index.js"></script>
+</head>
+<body class="body-container">
+    <div class="y-container yz-container">
+        <div class="y-tophead yz-tophead">
+            <h2>全国热点</h2>
+            <ul>
+                <li class="topheadact">
+                    <a href="#"></a>
+                </li>
+                <li>
+                    <a href="#"></a>
+                </li>
+                <li>
+                    <a href="#"></a>
+                </li>
+            </ul>
+        </div>
+        <div class="yz-topser">
+            <input type="text" value="大家正在搜：成都科技产业" class="sertxt">
+            <a href="#" class="yz-list">
+                <img src="images/yz-listicon.png">
+                <span>专题列表</span>
+            </a>
+            <a href="#" class="yz-newadd" id="yz-dialog-add">
+                <img src="images/yz-newadd.png">
+                <span>新建</span>
+            </a>
+        </div>
+        <!-- top-end -->
+        <div class="yz-maincontainer">
+            <div class="yz-mainlf">
+                <div class="yz-lfitem bt0">
+                    <div class="yz-itemtop">
+                        <a href="#">公车改革</a>
+                        <span>191</span>
+                    </div>
+                    <p>创建时间：2016.08.01</p>
+                </div>
+                <div class="yz-lfitem">
+                    <div class="yz-itemtop">
+                        <a href="#">公车改革</a>
+                        <span>191</span>
+                    </div>
+                    <p>创建时间：2016.08.01</p>
+                </div>
+                <div class="yz-lfitem">
+                    <div class="yz-itemtop">
+                        <a href="#">公车改革车改革车改革车改革车改革</a>
+                        <span>191</span>
+                    </div>
+                    <p>创建时间：2016.08.01</p>
+                </div>
+                <div class="yz-lfitem">
+                    <div class="yz-itemtop">
+                        <a href="#">成都机场出租车罢运</a>
+                        <span>191</span>
+                    </div>
+                    <p>创建时间：2016.08.01</p>
+                </div>
+                <div class="yz-lfitem">
+                    <div class="yz-itemtop">
+                        <a href="#">公车改革</a>
+                        <span>191</span>
+                    </div>
+                    <p>创建时间：2016.08.01</p>
+                </div>
+                <div class="yz-lfitem">
+                    <div class="yz-itemtop">
+                        <a href="#">公车改革</a>
+                        <span>191</span>
+                    </div>
+                    <p>创建时间：2016.08.01</p>
+                </div>
+                <div class="yz-lfitem">
+                    <div class="yz-itemtop">
+                        <a href="#">公车改革车改革车改革车改革车改革</a>
+                        <span>191</span>
+                    </div>
+                    <p>创建时间：2016.08.01</p>
+                </div>
+                <div class="yz-lfitem">
+                    <div class="yz-itemtop">
+                        <a href="#">成都机场出租车罢运</a>
+                        <span>191</span>
+                    </div>
+                    <p>创建时间：2016.08.01</p>
+                </div>
+                <div class="yz-lfitem">
+                    <div class="yz-itemtop">
+                        <a href="#">公车改革</a>
+                        <span>191</span>
+                    </div>
+                    <p>创建时间：2016.08.01</p>
+                </div>
+            </div>
+            <!-- 左侧-end -->
+            <div class="yz-mainrt" id="subject-right">
+                <div class="yz-rthead">
+                    <h2>公车改革</h2>
+                    <a href="javascript:void(0)" class="yz-rtset"></a>
+                    <a href="javascript:void(0)" class="yz-rtdelete"></a>
+                    <input type="text" class="yz-rtdate" id="yz-rtdateend" value="2016-08-03">
+                    <span class="yz-rtfg"></span>
+                    <input type="text" class="yz-rtdate" id="yz-rtdatestart" value="2016-07-05">
+                </div>
+                <table class="yz-rtable">
+                    <tr>
+                        <th>相关文章</th>
+                        <th>新闻</th>
+                        <th>博客</th>
+                        <th>论坛</th>
+                        <th>微博</th>
+                        <th>视频</th>
+                        <th>微信</th>
+                        <th>手机客户端</th>
+                        <th>总计</th>
+                    </tr>
+                    <tr>
+                        <td class="tdh">今日新增</td>
+                        <td>
+                            <span>19</span>
+                            -60.28%
+                        </td>
+                        <td>
+                            <span>19</span>
+                            -60.28%
+                        </td>
+                        <td class="skin-red">
+                            <span>131</span>
+                            6.28%
+                        </td>
+                        <td>
+                            <span>19</span>
+                            -60.28%
+                        </td>
+                        <td>
+                            <span>19</span>
+                            -60.28%
+                        </td>
+                        <td class="skin-blue">
+                            <span>0</span>
+                            0.0%
+                        </td>
+                        <td>
+                            <span>19</span>
+                            -60.28%
+                        </td>
+                        <td>
+                            <span>19</span>
+                            -60.28%
+                        </td>
+                    </tr>
+                    <tr class="trnum">
+                        <td class="tdh">总量</td>
+                        <td>1547</td>
+                        <td>38</td>
+                        <td>45</td>
+                        <td>1547</td>
+                        <td>38</td>
+                        <td>45</td>
+                        <td>1547</td>
+                        <td>38</td>
+                </table>
+                <div class="y-panel-pub y-panel-yq yz-panel-new">
+                    <div class="title">
+                        <h2>最新报道</h2>
+                        <a href="javascript:void(0)" class="panel-close"></a>
+                    </div>
+                    <div class="content">
+                        <ul>
+                            <li>
+                                <a href="#">网约车合法化,省钱就等于赚钱</a>
+                                <span class="date">1小时前</span>
+                                <span class="y-name">搜狐汽车</span>
+                            </li>
+                            <li>
+                                <a href="#">调查:网约车合法化触动新能源汽车产业</a>
+                                <span class="date">1小时前</span>
+                                <span class="y-name">搜狐汽车</span>
+                            </li>
+                            <li>
+                                <a href="#">网约车合法化,省钱就等于赚化,省钱就等于赚化,省钱就等于赚化,省钱就等于赚钱</a>
+                                <span class="date">1小时前</span>
+                                <span class="y-name">搜狐汽车</span>
+                            </li>
+                            <li>
+                                <a href="#">网约车合法化,省钱就等于赚钱</a>
+                                <span class="date">1小时前</span>
+                                <span class="y-name">搜狐汽车</span>
+                            </li>
+                            <li>
+                                <a href="#">网约车合法化,省钱就等于赚钱</a>
+                                <span class="date">5小时前</span>
+                                <span class="y-name">中国青年网</span>
+                            </li>
+                            <li>
+                                <a href="#">网约车合法化,省钱就等于赚钱</a>
+                                <span class="date">1小时前</span>
+                                <span class="y-name">搜狐汽车</span>
+                            </li>
+                            <li>
+                                <a href="#">网约车合法化,省钱就等于赚钱</a>
+                                <span class="date">1小时前</span>
+                                <span class="y-name">搜狐汽车</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- 最新报道-end -->
+                <div class="y-panel-pub y-panel-yq yz-panel-hot">
+                    <div class="title">
+                        <h2>热点新闻</h2>
+                        <a href="javascript:void(0)" class="panel-close"></a>
+                    </div>
+                    <div class="content">
+                        <ul>
+                            <li>
+                                <a href="#">网约车合法化,省钱就等于赚钱</a>
+                                <span class="date">1小时前</span>
+                                <span class="y-name">搜狐汽车</span>
+                                <p>56</p>
+                            </li>
+                            <li>
+                                <a href="#">调查:网约车合法化触动新能源汽车产业</a>
+                                <span class="date">1小时前</span>
+                                <span class="y-name">搜狐汽车</span>
+                                <p>36</p>
+                            </li>
+                            <li>
+                                <a href="#">网约车合法化,省钱就等于赚化,省钱就等于赚化,省钱就等于赚化,省钱就等于赚钱</a>
+                                <span class="date">1小时前</span>
+                                <span class="y-name">搜狐汽车</span>
+                                <p>12</p>
+                            </li>
+                            <li>
+                                <a href="#">网约车合法化,省钱就等于赚钱</a>
+                                <span class="date">1小时前</span>
+                                <span class="y-name">搜狐汽车</span>
+                                <p>36</p>
+                            </li>
+                            <li>
+                                <a href="#">网约车合法化,省钱就等于赚钱</a>
+                                <span class="date">5小时前</span>
+                                <span class="y-name">中国青年网</span>
+                                <p>56</p>
+                            </li>
+                            <li>
+                                <a href="#">网约车合法化,省钱就等于赚钱</a>
+                                <span class="date">1小时前</span>
+                                <span class="y-name">搜狐汽车</span>
+                                <p>56</p>
+                            </li>
+                            <li>
+                                <a href="#">网约车合法化,省钱就等于赚钱</a>
+                                <span class="date">1小时前</span>
+                                <span class="y-name">搜狐汽车</span>
+                                <p>16</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- 地域分布图-end -->
+            <div class="clearfix"></div>
+            <div class="y-panel-pub yz-panel-bloghot">
+                <div class="title">
+                    <h2>微博热议</h2>
+                    <a href="javascript:void(0)" class="panel-close"></a>
+                </div>
+                <div class="content">
+                    <div class="y-blog-item">
+                        <div class="pic">
+                            <img src="images/y-userpic.jpg"></div>
+                        <div class="info">
+                            <h4>
+                                <a href="#">新浪新闻</a>
+                            </h4>
+                            <p>
+                                2016年7月29日 - 原标题:网约车合法了出租汽车改革和专车新政亮相私家车条件7座及以下乘用车;安装具有行驶记录功能的车辆卫星定位装置、应急报警装置;车辆技术
+                            </p>
+                            <div class="from">
+                                <span>来自新浪微博</span>
+                                <span>2016-08-12 18:45:25</span>
+                                <a href="#" class="pl">评（0）</a>
+                                <a href="#" class="zf">转（0）</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- item-end -->
+                    <div class="y-blog-item">
+                        <div class="pic">
+                            <img src="images/y-userpic.jpg">
+                        </div>
+                        <div class="info">
+                            <h4>
+                                <a href="#">新浪新闻</a>
+                            </h4>
+                            <p>
+                                2016年7月29日 - 原标题:网约车合法了出租汽车改革和专车新政亮相私家车条件7座及以下乘用车;安装具有行驶记录功能的车辆卫星定位装置、应急报警装置;车辆技术
+                            </p>
+                            <div class="from">
+                                <span>来自新浪微博</span>
+                                <span>2016-08-12 18:45:25</span>
+                                <a href="#" class="pl">评（0）</a>
+                                <a href="#" class="zf">转（0）</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- item-end -->
+                    <div class="y-blog-item">
+                        <div class="pic">
+                            <img src="images/y-userpic.jpg">
+                        </div>
+                        <div class="info">
+                            <h4>
+                                <a href="#">新浪新闻</a>
+                            </h4>
+                            <p>
+                                2016年7月29日 - 原标题:网约车合法了出租汽车改革和专车新政亮相私家车条件7座及以下乘用车;安装具有行驶记录功能的车辆卫星定位装置、应急报警装置;车辆技术法了出租汽车改革和专车新政亮相私家车条件7座及以下乘用车;安装具有行驶记录功能的车辆卫星定位装置、应急报警装置;车辆技术
+                            </p>
+                            <div class="from">
+                                <span>来自新浪微博</span>
+                                <span>2016-08-12 18:45:25</span>
+                                <a href="#" class="pl">评（0）</a>
+                                <a href="#" class="zf">转（0）</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- item-end -->
+                </div>
+            </div>
+            <!-- 微博热议-end -->
+        </div>
+        <!-- 右侧-end -->
+    </div>
+
+    <!-- 新建专题 -->
+    <div class="yz-addzt" id="yza-dialog" style="display: none">
+        <div class="bg">
+            <div class="yza-title">
+                <h3>专题基本信息</h3>
+                <a href="javascript:void(0)" class="yza-close-panel" id="yza-dialog-close"></a>
+            </div>
+            <div class="yza-conitem yza-conitem-bas">
+                <p>专题名称</p>
+                <input class="yaz-pubtxt yza-ztname" type="text" value="">
+                <p>专题简介</p>
+                <textarea class="yaz-pubtxt yza-ztintro"></textarea>
+            </div>
+            <!-- 专题基本信息-end -->
+            <h4 class="yza-head">检索表达式信息</h4>
+            <div class="yaz-pubtxt yza-serinfo">
+                <div class="listp listp-select1">
+                    <span>检索范围</span>
+                    <input type="radio" name="fw" class="fw" value="">
+                    <label>标题</label>
+                    <input type="radio" name="fw" class="fw" value="">
+                    <label>正文</label>
+                    <span>来源</span>
+                    <select selWidth="145">
+                        <option value="">请选择功能</option>
+                        <option value="0">新增图片</option>
+                        <option value="1">维护图片</option>
+                        <option value="2">新增新闻</option>
+                    </select>
+                    <span>关键词</span>
+                    <input class="yaz-pubtxt yza-key" type="text" value=""></div>
+                <div class="clearfix"></div>
+                <!-- <div class="listp">
+                <span>关键词</span>
+                <input class="yaz-pubtxt yza-key" type="text" value=""></div>
+            -->
+            <div class="clearfix"></div>
+            <div class="listp listp-select2">
+                <span>逻辑关系</span>
+                <select selWidth="425">
+                    <option value="">功能</option>
+                    <option value="0">图片</option>
+                    <option value="1">维护图片</option>
+                    <option value="2">新增新闻</option>
+                </select>
+                <a href="javascript:void(0)" class="yza-highser">高级检索</a>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <!-- 检索表达式信息-end -->
+        <h4 class="yza-head">时间信息</h4>
+        <div class="yza-datebox clearfix">
+            <div class="yza-dateinfolf">专题时间</div>
+            <div class="yza-dateinfort">
+                <div class="listp clearfix">
+                    <input type="radio" name="newinfo" class="fw" value="">
+                    <label>关注最新信息</label>
+                </div>
+                <select selWidth="548">
+                    <option value="">最近一周</option>
+                    <option value="0">最近一个月</option>
+                    <option value="1">最近三个月</option>
+                    <option value="2">最近一年</option>
+                </select>
+                <div class="listp clearfix">
+                    <input type="radio" name="datear" class="fw" value="">
+                    <label>时间范围，结束时间可不设（表示事件正在继续）</label>
+                </div>
+                <div class="listp clearfix">
+                    <span class="datelabel">开始时间</span>
+                    <input class="laydate-icon" id="y-hotdatestr" value="2016-08-11">
+                    <input class="laydate-icon rt" id="y-hotdateend" value="2016-08-21">
+                    <span class="datelabel rt">结束时间</span>
+                </div>
+            </div>
+        </div>
+        <!-- 时间信息-end -->
+        <h4 class="yza-head yza-head2"></h4>
+        <div class="yza-dialog-btn">
+            <input type="button" value="确认">
+            <input type="button" value="取消"></div>
+    </div>
+    </div>
+    <!-- 日历 -->
+    <script type="text/javascript">
+    !function(){
+        laydate.skin('danlan');//切换皮肤，请查看skins下面皮肤库
+        laydate({elem: '#y-hotdate'});
+        
+    // 时间信息-设置起始时间
+    var start = {
+        elem: '#y-hotdatestr',
+        format: 'YYYY-MM-DD',
+        istime: true,
+        istoday: false,
+        choose: function(datas){
+             end.min = datas; // 开始日选好后，重置结束日的最小日期
+             end.start = datas // 将结束日的初始值设定为开始日
+        }
+    };
+    var end = {
+        elem: '#y-hotdateend',
+        format: 'YYYY-MM-DD',
+        istime: true,
+        istoday: false,
+        choose: function(datas){
+            start.max = datas; // 结束日选好后，充值开始日的最大日期
+        }
+    };
+    laydate(start);
+    laydate(end);
+    }();
+    !function(){
+    // 专题事件时间设置
+    var start = {
+        elem: '#yz-rtdatestart',
+        format: 'YYYY-MM-DD',
+        istime: true,
+        istoday: false,
+        choose: function(datas){
+             end.min = datas; // 开始日选好后，重置结束日的最小日期
+             end.start = datas // 将结束日的初始值设定为开始日
+        }
+    };
+    var end = {
+        elem: '#yz-rtdateend',
+        format: 'YYYY-MM-DD',
+        istime: true,
+        istoday: false,
+        choose: function(datas){
+            start.max = datas; // 结束日选好后，充值开始日的最大日期
+        }
+    };
+    laydate(start);
+    laydate(end);
+    }();
+    </script>
+    <!-- 专题事件JS -->
+    <script type="text/javascript" src="js/nest/subject.js"></script>
+</body>
+</html>

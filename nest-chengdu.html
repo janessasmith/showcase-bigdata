@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>成都热点嵌套页面</title>
+
+    <!--引入CSS-->
+    <link rel="stylesheet" href="css/public.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <!--引入Script-->
+    <script type="text/javascript" src="lib/jquery-1.11.1.min.js"></script>
+    <!-- 引入日历Echarts -->
+    <script type="text/javascript" src="lib/echarts-all.js"></script>
+    <!-- 日历JS -->
+    <script type="text/javascript" src="laydate/laydate.js"></script>
+    <!-- 嵌套页面常规JS效果 -->
+    <script type="text/javascript" src="js/nest/index.js"></script>
+</head>
+<body class="body-container">
+    <div class="y-container">
+        <div class="y-tophead">
+            <h2>成都舆情</h2>
+            <ul>
+                <li class="topheadact"><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+            </ul>
+        </div>
+        <h2 class="y-toptit">成都热点分布</h2>
+        <!-- top-end -->
+        <div class="y-hotcontain">
+            <div class="y-hot-lf">
+                <!-- map -->
+                <div class="y-hotmap">
+                    <!--<img src="images/y-map.jpg">-->
+                    <div class="y-hotmap-container" id="chengduMapContainer"></div>
+                </div>
+                <div class="y-panel-pub y-panel-yq">
+                    <div class="title">
+                        <h2>成都舆情</h2>
+                        <a href="javascript:void(0)" class="panel-close"></a>
+                    </div>
+                    <div class="content">
+                        <ul>
+                            <li>
+                                <a href="#">网约车合法化,省钱就等于赚钱</a>
+                                <span class="date">1小时前</span>
+                                <span class="y-name">搜狐汽车</span>
+                            </li>
+                            <li>
+                                <a href="#">调查:网约车合法化触动新能源汽车产业</a>
+                                <span class="date">1小时前</span>
+                                <span class="y-name">搜狐汽车</span>
+                            </li>
+                            <li>
+                                <a href="#">网约车合法化,省钱就等于赚化,省钱就等于赚化,省钱就等于赚化,省钱就等于赚钱</a>
+                                <span class="date">1小时前</span>
+                                <span class="y-name">搜狐汽车</span>
+                            </li>
+                            <li>
+                                <a href="#">网约车合法化,省钱就等于赚钱</a>
+                                <span class="date">1小时前</span>
+                                <span class="y-name">搜狐汽车</span>
+                            </li>
+                            <li>
+                                <a href="#">网约车合法化,省钱就等于赚钱</a>
+                                <span class="date">5小时前</span>
+                                <span class="y-name">中国青年网</span>
+                            </li>
+                            <li>
+                                <a href="#">网约车合法化,省钱就等于赚钱</a>
+                                <span class="date">1小时前</span>
+                                <span class="y-name">搜狐汽车</span>
+                            </li>
+                            <li>
+                                <a href="#">网约车合法化,省钱就等于赚钱</a>
+                                <span class="date">1小时前</span>
+                                <span class="y-name">搜狐汽车</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- 成都舆情-end -->
+            </div>
+            <!-- lf-end -->
+            <div class="y-hotncontain">
+                <div class="y-hotcon1">
+                    <div class="y-hothead">
+                        <h3>成都热点信息</h3>
+                        <ul>
+                            <li><a href="javascript:void(0)">三日</a></li>
+                            <li class="active"><a href="javascript:void(0)">一日</a></li>
+                            <li><input class="laydate-icon" id="y-hotdate" value="2016-08-11"></li>
+                            <li class="active"><a href="javascript:void(0)">全国</a></li>
+                        </ul>
+                    </div>
+                    <div class="y-hottit">
+                        <h3>成都热点</h3>
+                        <h4>热值</h4>
+                    </div>
+                    <div class="y-hotscroll">
+                        <ul class="y-hotscrollul">
+                            <li>
+                                <a href="#">北医三院“问题气体致盲”：事发10个月原因仍不明</a>
+                                <span>114</span>
+                            </li>
+                            <li>
+                                <a href="#">打打电话，为何能骗走百亿钱款？</a>
+                                <span>58</span>
+                            </li>
+                            <li>
+                                <a href="#">北医三院“问题气体致盲”：事发10个月原因仍不明</a>
+                                <span>114</span>
+                            </li>
+                            <li>
+                                <a href="#">打打电话，为何能骗走百亿钱款？</a>
+                                <span>58</span>
+                            </li>
+                            <li>
+                                <a href="#">北医三院“问题气体致盲”：事发10个月原因仍不明</a>
+                                <span>114</span>
+                            </li>
+                            <li>
+                                <a href="#">打打电话，为何能骗走百亿钱款？</a>
+                                <span>58</span>
+                            </li>
+                            <li>
+                                <a href="#">北医三院“问题气体致盲”：事发10个月原因仍不明</a>
+                                <span>114</span>
+                            </li>
+                            <li>
+                                <a href="#">打打电话，为何能骗走百亿钱款？</a>
+                                <span>58</span>
+                            </li>
+                            <li>
+                                <a href="#">北医三院“问题气体致盲”：事发10个月原因仍不明</a>
+                                <span>114</span>
+                            </li>
+                            <li>
+                                <a href="#">打打电话，为何能骗走百亿钱款？</a>
+                                <span>58</span>
+                            </li>
+                            <li>
+                                <a href="#">北医三院“问题气体致盲”：事发10个月原因仍不明</a>
+                                <span>114</span>
+                            </li>
+                            <li>
+                                <a href="#">打打电话，为何能骗走百亿钱款？</a>
+                                <span>58</span>
+                            </li>
+                            <li>
+                                <a href="#">北医三院“问题气体致盲”：事发10个月原因仍不明</a>
+                                <span>114</span>
+                            </li>
+                            <li>
+                                <a href="#">打打电话，为何能骗走百亿钱款？</a>
+                                <span>58</span>
+                            </li>
+                            <li>
+                                <a href="#">北医三院“问题气体致盲”：事发10个月原因仍不明</a>
+                                <span>114</span>
+                            </li>
+                            <li>
+                                <a href="#">打打电话，为何能骗走百亿钱款？</a>
+                                <span>58</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- 成都热点-end -->
+                <div class="y-hotcon2">
+                    <!-- 成都趋势柱状图 -->
+                    <div class="bg">
+                        <h3>成都热点近一周TOP4趋势图</h3>
+                        <!-- <img src="images/q_06.jpg" width="400" height="174"> -->
+                        <div style="height:174px;">
+                            <div class="trend-chart-container" id="chengduTendencyChartContainer" style="width:100%;height:274px;position:relative;top:-70px;"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 热点趋势图-end -->
+                <div class="y-panel-pub y-panel-cloud">
+                    <div class="title">
+                        <h2>热点词云</h2>
+                        <a href="javascript:void(0)" class="panel-close"></a>
+                    </div>
+                    <div class="content">
+                        <div id="cloud" style="height: 293px;margin:0 auto;position:relative;"></div>
+                    </div>
+                </div>
+                <!-- 热点词云-end -->
+
+            </div>
+        </div>
+        <!-- main1-end -->
+        <div class="y-hotcontain2">
+
+            <div class="clearfix"></div>
+            <div class="y-panel-pub y-panel-select">
+                <div class="title">
+                    <div class="y-select">
+                        <p>微博涉成都</p>
+                        <span class="sj"></span>
+                        <ul id="y-hot-tab">
+                            <li>微信涉成都</li>
+                            <li class="hotact">微博涉成都</li>
+                            <li>新闻涉成都</li>
+                        </ul>
+                    </div>
+                    <a href="javascript:void(0)" class="panel-close"></a>
+                </div>
+                <div class="content" id="y-hot-tabcon">
+                    <div class="y-tabcon">
+                        <div class="y-blog-item">
+                            <div class="pic">
+                                <img src="images/y-userpic.jpg">
+                            </div>
+                            <div class="info">
+                                <h4><a href="#">新浪新闻</a></h4>
+
+                                <p>2016年7月29日 - 原标题:网约车合法了出租汽车改革和专车新政亮相私家车条件7座及以下乘用车;安装具有行驶记录功能的车辆卫星定位装置、应急报警装置;车辆技术</p>
+
+                                <div class="from">
+                                    <span>来自新浪微博</span>
+                                    <span>2016-08-12 18:45:25</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- item-end -->
+                        <div class="y-blog-item">
+                            <div class="pic">
+                                <img src="images/y-userpic.jpg">
+                            </div>
+                            <div class="info">
+                                <h4><a href="#">新浪新闻</a></h4>
+
+                                <p>2016年7月29日 - 原标题:网约车合法了出租汽车改革和专车新政亮相私家车条件7座及以下乘用车;安装具有行驶记录功能的车辆卫星定位装置、应急报警装置;车辆技术</p>
+
+                                <div class="from">
+                                    <span>来自新浪微博</span>
+                                    <span>2016-08-12 18:45:25</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- item-end -->
+                        <div class="y-blog-item">
+                            <div class="pic">
+                                <img src="images/y-userpic.jpg">
+                            </div>
+                            <div class="info">
+                                <h4><a href="#">新浪新闻</a></h4>
+
+                                <p>2016年7月29日 - 原标题:网约车合法了出租汽车改革和专车新政亮相私家车条件7座及以下乘用车;安装具有行驶记录功能的车辆卫星定位装置、应急报警装置;车辆技术</p>
+
+                                <div class="from">
+                                    <span>来自新浪微博</span>
+                                    <span>2016-08-12 18:45:25</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- item-end -->
+                    </div>
+                    <!-- con1-end -->
+                    <div class="y-tabcon" style="display: none;">
+                        <div class="y-blog-item">
+                            <div class="pic">
+                                <img src="images/y-userpic.jpg">
+                            </div>
+                            <div class="info">
+                                <h4><a href="#">新浪新闻</a></h4>
+
+                                <p>2016年7月29日 - 原标题:网约车合法了出租汽车改革和专车新政亮相私家车条件7座及以下乘用车;安装具有行驶记录功能的车辆卫星定位装置、应急报警装置;车辆技术</p>
+
+                                <div class="from">
+                                    <span>来自新浪微博</span>
+                                    <span>2016-08-12 18:45:25</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- item-end -->
+                        <div class="y-blog-item">
+                            <div class="pic">
+                                <img src="images/y-userpic.jpg">
+                            </div>
+                            <div class="info">
+                                <h4><a href="#">新浪新闻</a></h4>
+
+                                <p>2016年7月29日 - 原标题:网约车合法了出租汽车改革和专车新政亮相私家车条件7座及以下乘用车;安装具有行驶记录功能的车辆卫星定位装置、应急报警装置;车辆技术</p>
+
+                                <div class="from">
+                                    <span>来自新浪微博</span>
+                                    <span>2016-08-12 18:45:25</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- item-end -->
+                    </div>
+                    <!-- con2-end -->
+                    <div class="y-tabcon" style="display: none;">
+                        <div class="y-blog-item">
+                            <div class="pic">
+                                <img src="images/y-userpic.jpg">
+                            </div>
+                            <div class="info">
+                                <h4><a href="#">新浪新闻</a></h4>
+
+                                <p>2016年7月29日 - 原标题:网约车合法了出租汽车改革和专车新政亮相私家车条件7座及以下乘用车;安装具有行驶记录功能的车辆卫星定位装置、应急报警装置;车辆技术</p>
+
+                                <div class="from">
+                                    <span>来自新浪微博</span>
+                                    <span>2016-08-12 18:45:25</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- item-end -->
+                        <div class="y-blog-item">
+                            <div class="pic">
+                                <img src="images/y-userpic.jpg">
+                            </div>
+                            <div class="info">
+                                <h4><a href="#">新浪新闻</a></h4>
+
+                                <p>2016年7月29日 - 原标题:网约车合法了出租汽车改革和专车新政亮相私家车条件7座及以下乘用车;安装具有行驶记录功能的车辆卫星定位装置、应急报警装置;车辆技术</p>
+
+                                <div class="from">
+                                    <span>来自新浪微博</span>
+                                    <span>2016-08-12 18:45:25</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- item-end -->
+                        <div class="y-blog-item">
+                            <div class="pic">
+                                <img src="images/y-userpic.jpg">
+                            </div>
+                            <div class="info">
+                                <h4><a href="#">新浪新闻</a></h4>
+
+                                <p>2016年7月29日 - 原标题:网约车合法了出租、应急报警装置;车辆技术</p>
+
+                                <div class="from">
+                                    <span>来自新浪微博</span>
+                                    <span>2016-08-12 18:45:25</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- item-end -->
+                    </div>
+                    <!-- con3-end -->
+                </div>
+            </div>
+            <!-- 微博涉成都-end -->
+        </div>
+    </div>
+    <!-- 日历 -->
+    <script type="text/javascript">
+        !function () {
+            laydate.skin('danlan');//切换皮肤，请查看skins下面皮肤库
+            laydate({elem: '#y-hotdate'});//绑定元素
+        }();
+    </script>
+
+    <!-- 初始化数据 -->
+    <script type="text/javascript" src="js/nest/init-index.js"></script>
+    <!-- 引入地图 -->
+    <script type="text/javascript" src="js/core/map.js"></script>
+    <script type="text/javascript" src="js/nest/map-chengdu.js"></script>
+    <!-- 引入图表 -->
+    <script type="text/javascript" src="js/nest/charts.js"></script>
+    <script type="text/javascript" src="js/nest/chart-chengdu.js"></script>
+    <!-- 引入云词 -->
+    <script type="text/javascript" src="js/nest/cloud.js"></script>
+</body>
+</html>
+

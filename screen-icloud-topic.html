@@ -1,0 +1,50 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>实时舆情热点</title>
+    <link rel="stylesheet" href="css/index.css">
+
+    <script type="text/javascript" src="lib/jquery-1.11.1.min.js"></script>
+    <!-- 引入日历echarts -->
+    <script type="text/javascript" src="lib/echarts-all.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="hot-item">
+            <div class="cd-rd-header current-hot-header">
+                <h1>实时舆情热点</h1>
+            </div>
+            <div class="current-hot-container">
+                <div class="current-hot-left">
+                    <div class="clearfix">
+                        <div class="current-hot-left-tit">
+                            <span class="prev"></span>
+                            <p>微博涉成都</p>
+                            <span class="next"></span>
+                        </div>
+                    </div>
+                    <div class="current-hot-left-con-wrap" id="cur-hot-left-con-wrap">
+                    </div>
+                </div>
+                <div class="current-hot-right">
+                    <div class="current-hot-right-wrap">
+                        <p>新闻热点词云</p>
+                        <div id="newsWordCloud"></div>
+                    </div>
+                    <div class="current-hot-right-wrap">
+                        <p>纸媒热点词云</p>
+                        <div id="paperWordCloud"></div>
+                    </div>
+                    <div class="current-hot-right-wrap">
+                        <p>微信热点词云</p>
+                        <div id="wechatWordCloud"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/core/current-hot.js"></script>
+    <script type="text/javascript" src="js/screen/startup-current.js"></script>
+</body>
+</html>
