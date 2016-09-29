@@ -48,7 +48,7 @@
                             <div><span>地域</span></div>
                             <div><span>热度值</span></div>
                         </div>
-                        <div id="quanGuoProvinceListItems" style="display: inline-block; width:90%;"></div>
+                        <div class="list" id="quanGuoProvinceListItems"></div>
                     </div>
                 </div>
             </div>
@@ -66,7 +66,7 @@
                                 <a href="javascript:void(0)">一日</a>
                             </li>
                             <li>
-                                <input class="laydate-icon" id="y-hotdate" value="2016-08-11">
+                                <input class="laydate-icon" value="2016-08-11" id="y-hotdate">
                             </li>
                             <li class="active">
                                 <a href="javascript:void(0)">全国</a>
@@ -150,15 +150,13 @@
                 <div class="y-hotcon2">
                     <div class="bg">
                         <h3>全国热点近一周TOP4趋势图</h3>
-                        <div style="height:174px;">
-                            <div class="trend-chart-container" id="quanGuoTendencyChartContainer" style="width:100%;height:274px;position:relative;top:-70px;"></div>
-                        </div>
+                        <div class="trend-chart-container" id="quanGuoTendencyChartContainer"></div>
                     </div>
                 </div>
             </div>
         </div>
         <!-- 全国热点事件聚类 -->
-        <div class="y-hotcontain2">
+        <!-- <div class="y-hotcontain2">
             <div class="y-panel-pub yqt-panel">
                 <div class="title">
                     <h2>全国热点事件聚类</h2>
@@ -170,7 +168,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
     <!-- 日历 -->
     <script type="text/javascript">
