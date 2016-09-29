@@ -2,6 +2,7 @@ $(function() {
     var containerWidth = 1920;
     var containerHeight = 1080;
     var scaleAndLocation = getScaleAndLocation(containerWidth, containerHeight);
+
     function getScaleAndLocation(width, height) {
         // 用于"transform": "scale(" + scale + ")",
         var scale = 1;

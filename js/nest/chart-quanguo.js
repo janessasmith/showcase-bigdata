@@ -14,15 +14,15 @@ function initData() {
  * @return {[type]} [description]
  */
 function quanGuoChart() {
-	var chartParameters = {
-		"method": "getDoc",
-		"dashboards": "ffe3d5ed-eff5df01-c0c2-037d-e4b072cc",
-		"gadgets": "001270b4-6e366353-085a-037d-e4b04045",
-		"lableType": "content"
-	};
+    var chartParameters = {
+        "method": "getDoc",
+        "dashboards": "ffe3d5ed-eff5df01-c0c2-037d-e4b072cc",
+        "gadgets": "001270b4-6e366353-085a-037d-e4b04045",
+        "lableType": "content"
+    };
 
-	var chartContainer = echarts.init(document.getElementById('quanGuoTendencyChartContainer'));
-	getChartsData(chartContainer, chartParameters);
+    var chartContainer = echarts.init(document.getElementById('quanGuoTendencyChartContainer'));
+    getChartsData(chartContainer, chartParameters);
 }
 
 /**
@@ -30,7 +30,7 @@ function quanGuoChart() {
  * @return {[type]} [description]
  */
 function drawProvinceList() {
-	// 日期处理
+    // 日期处理
     var tmpTime = {
         year: hotInfoVisual.time.curTime.year,
         month: hotInfoVisual.time.curTime.month - 1,

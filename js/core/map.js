@@ -1,4 +1,4 @@
-hotInfoVisual.drawMap = function (mapEle, container, option, parameters, curArea) {
+hotInfoVisual.drawMap = function(mapEle, container, option, parameters, curArea) {
     if (!mapEle) {
         return;
     }
@@ -8,12 +8,11 @@ hotInfoVisual.drawMap = function (mapEle, container, option, parameters, curArea
     if (option.mapType != "chengdu") {
         // 引入全国地图
         url = './data/map/quanGuoMapInfo.json';
-    }
-    else {
+    } else {
         // 引入成都地图
         url = './data/map/chengduMapInfo.json';
     }
-    $.getJSON(url, function (jsonData) {
+    $.getJSON(url, function(jsonData) {
         if (jsonData.ISSUCESS == 'false') {
             console.log("获取‘地图热点’数据失败");
         }
@@ -83,7 +82,7 @@ hotInfoVisual.drawMap = function (mapEle, container, option, parameters, curArea
                     show: true,
                     trigger: 'item',
                     backgroundColor: "rgba(0,0,0,0)", // 提示背景颜色，透明度为0的黑色
-                    formatter: function (params, ticket, callback) {
+                    formatter: function(params, ticket, callback) {
                         if (container.curHideTooltipEleObj && container.curHideTooltipEleObj.name != params.name) {
                             container.curHideTooltipEleObj.show();
                             container.curHideTooltipEleObj = mapEleObj.find("[name=" + params.name + "]");
@@ -109,7 +108,7 @@ hotInfoVisual.drawMap = function (mapEle, container, option, parameters, curArea
                                 var num = 0;
                                 if (isLoading) {
                                     // 等待500毫秒，避免晃动鼠标的时候发多次请求
-                                    var waitLoadingTitleInterval = setInterval(function () {
+                                    var waitLoadingTitleInterval = setInterval(function() {
                                         if (!curAreaTitles.isLoading) {
                                             clearInterval(waitLoadingTitleInterval);
                                             curAreaTitles.isLoading = false;
@@ -125,8 +124,7 @@ hotInfoVisual.drawMap = function (mapEle, container, option, parameters, curArea
                                     htmls = curAreaTitles.htmls;
                                     callback(ticket, htmls);
                                 }
-                            }
-                            else {
+                            } else {
                                 container.top3TitlesHtml[areaData.newsListArea] = {
                                     isLoading: true
                                 };
@@ -137,12 +135,11 @@ hotInfoVisual.drawMap = function (mapEle, container, option, parameters, curArea
                                 if (option.mapType != "chengdu") {
                                     // 引入全国地图提示框内容
                                     Tipsurl = './data/map/quanGuoMapTips.json';
-                                }
-                                else {
+                                } else {
                                     // 引入成都地图提示框内容
                                     Tipsurl = './data/map/chengduMapTips.json';
                                 }
-                                $.getJSON(Tipsurl, function (titlesData) {
+                                $.getJSON(Tipsurl, function(titlesData) {
                                     var curAreaTitles = container.top3TitlesHtml[areaData.newsListArea];
                                     curAreaTitles.isLoading = false;
                                     htmls = tmpHtmls;
@@ -242,8 +239,8 @@ hotInfoVisual.drawMap = function (mapEle, container, option, parameters, curArea
             // 构造区县级地图数据
             if (!echarts.util.mapData.params.params[option.mapType]) {
                 echarts.util.mapData.params.params[option.mapType] = {
-                    getGeoJson: function (callback) {
-                        $.getJSON('./data/echarts/' + option.mapType + '.json', function (data) {
+                    getGeoJson: function(callback) {
+                        $.getJSON('./data/echarts/' + option.mapType + '.json', function(data) {
                             // 压缩后的地图数据必须使用 decode 函数转换
                             callback(echarts.util.mapData.params.decode(data));
                         });
@@ -254,7 +251,7 @@ hotInfoVisual.drawMap = function (mapEle, container, option, parameters, curArea
             container.mapContainer.setOption(mapOption);
 
             // 自适应
-            window.onresize = function () {
+            window.onresize = function() {
                 container.mapContainer.resize();
                 drawMap();
             }
@@ -264,7 +261,7 @@ hotInfoVisual.drawMap = function (mapEle, container, option, parameters, curArea
                 // 选择地图中的某个市后执行事件：重新绘制所选择市的地图等数据
                 container.mapContainer.on("mapSelected", option.selectedEventFn);
             }
-            container.mapContainer.on("mouseout", function (params) {
+            container.mapContainer.on("mouseout", function(params) {
                 if (container.curHideTooltipEleObj) {
                     container.curHideTooltipEleObj.show();
                 }
@@ -272,7 +269,7 @@ hotInfoVisual.drawMap = function (mapEle, container, option, parameters, curArea
 
             // 让有数据的区域上显示出数据
             // 延时一定时间，等待地图加载完成
-            setTimeout(function () {
+            setTimeout(function() {
                 drawPointData();
             }, 500);
 
@@ -306,7 +303,7 @@ hotInfoVisual.drawMap = function (mapEle, container, option, parameters, curArea
                             markPointDataHtmls.push(";'></div>");
 
 
-                            var animationValue = "markPointCircleFadeOut 5s ease " + (animationDelay +.5) + "s 1 normal both";
+                            var animationValue = "markPointCircleFadeOut 5s ease " + (animationDelay + .5) + "s 1 normal both";
                             markPointDataHtmls.push("<span class='tmpDataTitle' style='animation:");
                             markPointDataHtmls.push(animationValue);
                             markPointDataHtmls.push(";-webkit-animation:");
@@ -329,7 +326,7 @@ hotInfoVisual.drawMap = function (mapEle, container, option, parameters, curArea
                     clearInterval(container.markPointInterval);
                 }
 
-                container.markPointInterval = setInterval(function () {
+                container.markPointInterval = setInterval(function() {
                     var startMarkPointEleObj = container.markPointEleObjs[(num - showLength) % container.markPointEleObjs.length];
                     if (startMarkPointEleObj) {
                         startMarkPointEleObj.style.display = "none";

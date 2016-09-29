@@ -2,6 +2,7 @@ $(function() {
     var containerWidth = 1920;
     var containerHeight = 1080;
     var scaleAndLocation = getScaleAndLocation(containerWidth, containerHeight);
+
     function getScaleAndLocation(width, height) {
         // 用于"transform": "scale(" + scale + ")",
         var scale = 1;
@@ -148,6 +149,7 @@ $(function() {
     }
     hotInfoVisual.quanQuoPanel.curSelectedCatetory = $.extend(true, {}, hotInfoVisual.quanQuoPanel.categories[0]);
     hotInfoVisual.quanQuoPanel.curSelectedLoadDays = $.extend(true, {}, hotInfoVisual.quanQuoPanel.loadDaysList[0]);
+
     function initPanel(curPanelObj) {
         var categoryEleObj = $("#" + curPanelObj.tag + "Category");
         if (categoryEleObj.length > 0) {

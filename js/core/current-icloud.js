@@ -6,7 +6,7 @@ initData();
  * @return {[type]} [description]
  */
 function initStatus() {
-    var width, height, xScale, yScale;
+    var width, height, xScale, yScale, option;
 }
 
 /**
@@ -14,7 +14,6 @@ function initStatus() {
  * @return {[type]} [description]
  */
 function initData() {
-    setSize('#js-css');
     getWordCloudData();
     requireData();
 }
@@ -25,8 +24,8 @@ function initData() {
  */
 function getWordCloudData() {
     $.ajax({
-        url: "/cdyq/client.do",
         type: "GET",
+        url: "/cdyq/client.do",
         data: {
             "method": "getDoc",
             "dashboards": "ffe3d5ed-eff5df01-c0c2-037d-e4b072cc",
@@ -86,23 +85,6 @@ function renderWordCloud(item, opt) {
 }
 
 /**
- * [setSize description] 根据页面大小缩放
- * @param {[type]} id [description] 被添加缩放样式的元素
- */
-function setSize(id) {
-    width = window.innerWidth;
-    height = window.innerHeight;
-    xScale = width / 1920;
-    yScale = height / 1080;
-    var jscss = [
-        'body {',
-        'transform: translate(' + ~~(-50 * (1 - xScale)) + '%,' + ~~(-50 * (1 - yScale)) + '%) scale(' + xScale + ',' + yScale + ');',
-        '}'
-    ].join('\n');
-    $(id).text(jscss);
-}
-
-/**
  * [createRandomItemStyle description] 随机生成rgb颜色
  * @return {[type]} [description]
  */
@@ -119,13 +101,13 @@ function createRandomItemStyle() {
 }
 
 /**
- * [requireData description] 请求数据渲染列表
+ * [requireData description] 请求数据渲染列表 假数据
  * @return {[type]} [description]
  */
 function requireData() {
     $.ajax({
-        url: "./data/currentHot/data.json",
         type: "GET",
+        url: "./data/currentHot/data.json",
         dataType: "json",
         success: function(data) {
             var contentWrap = $("#cur-hot-left-con-wrap");
@@ -158,11 +140,3 @@ function requireData() {
         }
     });
 }
-
-/**
- * 添加窗口大小变化监听事件
- */
-// window.addEventListener('resize', setSize('#js-css'), false);
-window.onresize = function() {
-    setSize('#js-css');
-};

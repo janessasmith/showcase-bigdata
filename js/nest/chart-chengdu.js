@@ -5,7 +5,7 @@ initData();
  * @return {[type]} [description]
  */
 function initData() {
-    chengduChart();
+	chengduChart();
 }
 
 /**
@@ -19,7 +19,7 @@ function chengduChart() {
 		"gadgets": "ffe3d5ed-eff5df14-ca60-037d-e4b072cc",
 		"lableType": "content"
 	};
-	
+
 	var chartContainer = echarts.init(document.getElementById('chengduTendencyChartContainer'));
 	getChartsData(chartContainer, chartParameters);
 }

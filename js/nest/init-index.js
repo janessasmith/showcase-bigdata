@@ -15,21 +15,21 @@
         }
     };
     // 写成年.月.日, 如果是一位数前面补0
-    hotInfoVisual.time.toDayString = function (timeObj, separator) {
-        var spt = separator ? separator : ".";
-        var month = timeObj.month < 10 ? "0" + timeObj.month : timeObj.month;
-        var day = timeObj.day < 10 ? "0" + timeObj.day : timeObj.day;
-        return timeObj.year + spt + month + spt + day;
-    }
-    // 写成月.日, 如果是一位数前面补0
-    hotInfoVisual.time.toDayNoYearString = function (timeObj, separator) {
-        var spt = separator ? separator : ".";
-        var month = timeObj.month < 10 ? "0" + timeObj.month : timeObj.month;
-        var day = timeObj.day < 10 ? "0" + timeObj.day : timeObj.day;
-        return month + spt + day;
-    }
-    // 更新时间
-    hotInfoVisual.time.update = function (timeObj, newTime) {
+    hotInfoVisual.time.toDayString = function(timeObj, separator) {
+            var spt = separator ? separator : ".";
+            var month = timeObj.month < 10 ? "0" + timeObj.month : timeObj.month;
+            var day = timeObj.day < 10 ? "0" + timeObj.day : timeObj.day;
+            return timeObj.year + spt + month + spt + day;
+        }
+        // 写成月.日, 如果是一位数前面补0
+    hotInfoVisual.time.toDayNoYearString = function(timeObj, separator) {
+            var spt = separator ? separator : ".";
+            var month = timeObj.month < 10 ? "0" + timeObj.month : timeObj.month;
+            var day = timeObj.day < 10 ? "0" + timeObj.day : timeObj.day;
+            return month + spt + day;
+        }
+        // 更新时间
+    hotInfoVisual.time.update = function(timeObj, newTime) {
         if (!newTime) {
             newTime = new Date();
         }
@@ -185,6 +185,7 @@
 
         ]
     };
+    
     // 获取全国地图
     hotInfoVisual.quanQuoPanel = {
         tag: "quanGuo",

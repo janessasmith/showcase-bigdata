@@ -28,7 +28,6 @@ $(function() {
             drawMap(curPanelObj);
 
         });
-
         drawMap(curPanelObj);
     }
     initPanel(hotInfoVisual.quanQuoPanel);
