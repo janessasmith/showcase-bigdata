@@ -24,8 +24,8 @@ $(function() {
      */
     function getWordCloudData() {
         $.ajax({
-            url: "/cdyq/client.do",
             type: "GET",
+            url: "/cdyq/client.do",
             data: {
                 "method": "getDoc",
                 "dashboards": "ffe3d5ed-eff5df01-c0c2-037d-e4b072cc",

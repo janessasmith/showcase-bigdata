@@ -38,8 +38,8 @@ $(function() {
      */
     function getChartData(paramF, paramS, index) {
         $.ajax({
-            url: "/cdyq/client.do",
             type: "GET",
+            url: "/cdyq/client.do",
             async: false,  //设置ajax为同步请求,默认是异步请求
             data: {
                 "method": "processSMASAPI",

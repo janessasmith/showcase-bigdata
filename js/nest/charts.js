@@ -16,10 +16,9 @@ function initStatus() {
  */
 function getChartsData(chartContainer, parameters) {
 	$.ajax({
-		url: "/cdyq/client.do",
 		type: "GET",
+		url: "/cdyq/client.do",
 		data: parameters,
-		
 		dataType: "json",
 		success: function(data) {
 			// 获取第一组数据
@@ -177,15 +176,14 @@ function getChartsData(chartContainer, parameters) {
  */
 function getProvinceList(container) {
 	$.ajax({
-		url: "/cdyq/client.do",
 		type: "GET",
+		url: "/cdyq/client.do",
 		data: {
 			"method": "getDoc",
 			"dashboards": "ffe3d5ed-eff5df01-c0c2-037d-e4b072cc",
 			"gadgets": "ffff43c8-6e069e5e-085a-037d-e4b04045",
 			"lableType": "content"
 		},
-		
 		dataType: "json",
 		success: function(data) {
 			var dataList = JSON.parse(data.result);
@@ -196,7 +194,7 @@ function getProvinceList(container) {
             
             // 遍历不超过十次
             for (var i = 0; i < cityValues.length && i < 10; i++) {
-
+            	
                 var listHtmls = [];
 
                 listHtmls.push('<div class="province-list-item">');
@@ -227,8 +225,7 @@ function getProvinceList(container) {
                 listHtmls.push('</div>');
                 listHtmls.push('</div>');
 
-                container.append(listHtmls.join(""));
-                
+                container.append(listHtmls.join("")); 
             }
 		}
 	});
