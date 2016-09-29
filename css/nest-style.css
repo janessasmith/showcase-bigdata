@@ -1,7 +1,11 @@
 @charset 'UTF-8';
 
+/**
+ * Created by ZhengLu on 2016/8/22.
+ */
+
 body {
-	font-family: 'Microsoft YaHei','微软雅黑','Arial';
+	font-family: 'Microsoft YaHei', '微软雅黑', 'Arial', sans-serif;
 	font-size: 14px;
 	color: #75797c;
 	background: #fff;
@@ -9,14 +13,14 @@ body {
 
 input,
 textarea {
-	font-family: 'Microsoft YaHei';
+	font-family: 'Microsoft YaHei', '微软雅黑', 'Arial', sans-serif;
 	font-size: 12px;
 	color: #9d9d9d;
 }
 
 select,
 option {
-	font-family: 'Microsoft YaHei';
+	font-family: 'Microsoft YaHei', '微软雅黑', 'Arial', sans-serif;
 	color: #fff;
 	border: none;
 	outline: none;
@@ -254,7 +258,7 @@ option {
 
 .y-tophead h2 {
 	font-size: 24px;
-	font-weight: normal;
+	font-weight: 400;
 	float: left;
 	margin: 0;
 	padding-left: 58px;
@@ -292,7 +296,7 @@ option {
 
 h2.y-toptit {
 	font-size: 18px;
-	font-weight: normal;
+	font-weight: 400;
 	line-height: 50px;
 	height: 50px;
 	margin: 0;
@@ -463,7 +467,7 @@ ul.y-hotscrollul li a:hover {
 
 ul.y-hotscrollul li span {
 	font-size: 14px;
-	font-weight: bold;
+	font-weight: 600;
 	display: block;
 	float: right;
 	color: #e95656;
@@ -771,35 +775,7 @@ ul.y-hotscrollul li span {
 .yq-totmap img {
 	height: 100%;
 }
-/* .yqt-tjcontain{
-	border: 1px solid #e7e7e7;
-	background: #fff;
-	border-radius: 3px;
-	overflow: hidden;
-	margin-top: 10px;
-}
-.yqt-tjcontain .yqt-tit{
-	height: 38px;
-	line-height: 38px;
-	background: #fafafa;
-	border: 1px solid #fff;
-	padding-left: 16px;
-	font-size: 14px;
-	color: #565656;
-	font-weight: bold;
-}
-.yqt-tjcontain .yqt-con{
-	overflow: hidden;
-	padding-top: 5px;
-	padding-bottom: 20px;
-	background: #fafafa;
-	border: 1px solid #fff;
-	border-top: 1px solid #e7e7e7;
-}
-.yqt-tjcontain .yqt-con img{
-	display: block;
-	margin: 0 auto;
-} */
+
 .yqt-panel {
 	overflow: hidden;
 	margin-top: 10px;
@@ -846,7 +822,7 @@ ul.y-hotscrollul li span {
 }
 
 .yz-topser .sertxt {
-	font-family: '微软雅黑';
+	font-family: 'Microsoft YaHei', '微软雅黑', 'Arial', sans-serif;
 	font-size: 15px;
 	line-height: 50px;
 	display: block;
@@ -929,7 +905,7 @@ ul.y-hotscrollul li span {
 
 .yz-lfitem .yz-itemtop a {
 	font-size: 14px;
-	font-weight: bold;
+	font-weight: 600;
 	display: block;
 	float: left;
 	overflow: hidden;
@@ -1028,7 +1004,7 @@ table.yz-rtable {
 
 table.yz-rtable th {
 	font-size: 12px;
-	font-weight: bold;
+	font-weight: 600;
 	line-height: 42px;
 	height: 42px;
 	text-align: center;
@@ -1047,7 +1023,7 @@ table.yz-rtable td {
 
 table.yz-rtable tr td.tdh {
 	font-size: 12px;
-	font-weight: bold;
+	font-weight: 600;
 	color: #6c6c6c;
 }
 
@@ -1058,7 +1034,7 @@ table.yz-rtable td {
 
 table.yz-rtable td span {
 	font-size: 16px;
-	font-weight: bold;
+	font-weight: 600;
 	padding-right: 4px;
 }
 
@@ -1072,7 +1048,7 @@ table.yz-rtable td.skin-blue {
 
 table.yz-rtable tr.trnum td {
 	font-size: 15px;
-	font-weight: bold;
+	font-weight: 600;
 	color: #01a0e4;
 }
 
@@ -1257,7 +1233,7 @@ table.yz-rtable tr.trnum td.tdh {
 }
 
 .yaz-pubtxt {
-	font-family: '微软雅黑';
+	font-family: 'Microsoft YaHei', '微软雅黑', 'Arial', sans-serif;
 	font-size: 12px;
 	display: block;
 	padding-left: 2%;
@@ -1331,7 +1307,7 @@ h4.yza-head {
 }
 
 a.yza-highser {
-	font-family: '微软雅黑';
+	font-family: 'Microsoft YaHei', '微软雅黑', 'Arial', sans-serif;
 	font-size: 12px;
 	line-height: 28px;
 	display: block;
@@ -1437,7 +1413,7 @@ a.yza-highser {
 
 .yza-dateinfort .laydate-icon {
 	font-size: 12px;
-	font-weight: bold;
+	font-weight: 600;
 	line-height: 28px;
 	display: block;
 	float: left;
@@ -1450,6 +1426,7 @@ a.yza-highser {
 	background-color: #fff;
 	background-image: url(../images/dateicon.png);
 	background-position: 95% center;
+	cursor: pointer;
 }
 
 .yza-dateinfort .rt {
@@ -1470,7 +1447,7 @@ h4.yza-head2 {
 }
 
 .yza-dialog-btn input {
-	font-family: '微软雅黑';
+	font-family: 'Microsoft YaHei', '微软雅黑', 'Arial', sans-serif;
 	font-size: 12px;
 	line-height: 25px;
 	display: block;
@@ -1530,7 +1507,6 @@ h4.yza-head2 {
 }
 
 .province-list .province-list-item span {
-    /*font-weight: 600;*/
 	line-height: 38px;
 	color: #919191;
 }

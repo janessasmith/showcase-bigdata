@@ -5,7 +5,7 @@
  */
 
 body {
-    font-family: 'Microsoft YaHei','微软雅黑','Arial';
+    font-family: 'Microsoft YaHei', '微软雅黑', 'Arial', sans-serif;
     font-size: 14px;
     color: #75797c;
     background-color: #fff;
@@ -13,14 +13,14 @@ body {
  
 input,
 textarea {
-    font-family: 'Microsoft YaHei','微软雅黑','Arial';
+    font-family: 'Microsoft YaHei', '微软雅黑', 'Arial', sans-serif;
     font-size: 12px;
     color: #9d9d9d;
 }
 
 select,
 option {
-    font-family: 'Microsoft YaHei','微软雅黑','Arial';
+    font-family: 'Microsoft YaHei', '微软雅黑', 'Arial', sans-serif;
     color: #fff;
     border: none;
     outline: none;
@@ -80,7 +80,7 @@ div {
 }
 
 .hot-item .content .map .map-container {
-    font-family: 'Microsoft YaHei','微软雅黑','Arial';
+    font-family: 'Microsoft YaHei', '微软雅黑', 'Arial', sans-serif;
     z-index: 1;
     width: 1028px;
     height: 868px;
@@ -443,6 +443,7 @@ div {
 .rd-num-tit .rd-date-sel .date-icon {
     border: none;
     background: url(../images/cb-rd-icon05.png) no-repeat 110px center;
+    cursor: pointer;
 }
 
 .rd-num-tit .rd-date-btn {
@@ -735,7 +736,7 @@ div {
 
 .current-hot-left .current-hot-left-tit p {
     font-size: 30px;
-    font-weight: bold;
+    font-weight: 600;
     float: left;
     margin-left: 70px;
     padding-left: 60px;
@@ -758,7 +759,7 @@ div {
 
 .current-hot-left-con .area {
     font-size: 18px;
-    font-weight: bold;
+    font-weight: 600;
     line-height: 53px;
     display: block;
     float: left;
@@ -862,7 +863,7 @@ div {
 }
 
 .current-hot-left-con .support i {
-    font-style: normal;
+    font-style: 400;
     line-height: 26px;
     display: block;
     width: 64px;
@@ -880,7 +881,7 @@ div {
 }
 
 .current-hot-left-con .transpond i {
-    font-style: normal;
+    font-style: 400;
     line-height: 22px;
     display: block;
     width: 64px;
@@ -909,7 +910,7 @@ div {
 
 .current-hot-right .current-hot-right-wrap p {
     font-size: 18px;
-    font-weight: bold;
+    font-weight: 600;
     line-height: 40px;
     height: 40px;
     text-align: center;
