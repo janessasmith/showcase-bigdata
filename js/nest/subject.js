@@ -1,7 +1,7 @@
 $(function() {
-	/**
-	 * 执行初始化数据方法
-	 */
+    /**
+     * 执行初始化数据方法
+     */
     initData();
 
     /**
@@ -40,7 +40,7 @@ $(function() {
         $.ajax({
             type: "GET",
             url: "/cdyq/client.do",
-            async: false,  //设置ajax为同步请求,默认是异步请求
+            async: false, //设置ajax为同步请求,默认是异步请求
             data: {
                 "method": "processSMASAPI",
                 "smasapi": "http://www.smas.cn/api/specials/" + paramF + "/sections/" + paramS + "/content?access_token=d7674a6e-7daa-4937-b81f-33ee7d46051a"
@@ -57,7 +57,7 @@ $(function() {
                 var chartContainer = container.find(".chart-container").eq(index);
                 var boxContainer = chartContainer.parent();
                 chartContainer.attr("id", "chart-container" + index);
-                index % 2 == 0?boxContainer.addClass("yz-panel-qs"):boxContainer.addClass("yz-panel-fb");
+                index % 2 == 0 ? boxContainer.addClass("yz-panel-qs") : boxContainer.addClass("yz-panel-fb");
                 if (type == "barchart") {
                     renderBarChart("chart-container" + index, xAxisData, seriesData);
                 } else if (type == "linechart") {
@@ -96,15 +96,19 @@ $(function() {
                 type: 'line',
                 data: series,
                 markPoint: {
-                    data: [
-                        { type: 'max', name: '最大值' },
-                        { type: 'min', name: '最小值' }
-                    ]
+                    data: [{
+                        type: 'max',
+                        name: '最大值'
+                    }, {
+                        type: 'min',
+                        name: '最小值'
+                    }]
                 },
                 markLine: {
-                    data: [
-                        { type: 'average', name: '平均值' }
-                    ]
+                    data: [{
+                        type: 'average',
+                        name: '平均值'
+                    }]
                 }
             }]
         };

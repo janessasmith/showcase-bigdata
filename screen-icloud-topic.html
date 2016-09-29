@@ -1,21 +1,26 @@
 <html>
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>实时舆情热点</title>
-    <link rel="stylesheet" href="css/index.css">
 
+    <!--引入CSS-->
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+
+    <!--引入Script-->
     <script type="text/javascript" src="lib/jquery-1.11.1.min.js"></script>
-    <!-- 引入日历echarts -->
+    <!-- 引入Echarts -->
     <script type="text/javascript" src="lib/echarts-all.js"></script>
 </head>
-
 <body>
     <div class="container">
         <div class="hot-item">
+            <!-- 头部 -->
             <div class="cd-rd-header current-hot-header">
                 <h1>实时舆情热点</h1>
             </div>
             <div class="current-hot-container">
+                <!-- 左侧微博成都 -->
                 <div class="current-hot-left">
                     <div class="clearfix">
                         <div class="current-hot-left-tit">
@@ -24,9 +29,9 @@
                             <span class="next"></span>
                         </div>
                     </div>
-                    <div class="current-hot-left-con-wrap" id="cur-hot-left-con-wrap">
-                    </div>
+                    <div class="current-hot-left-con-wrap" id="cur-hot-left-con-wrap"></div>
                 </div>
+                <!-- 右侧 热点词云 -->
                 <div class="current-hot-right">
                     <div class="current-hot-right-wrap">
                         <p>新闻热点词云</p>
@@ -44,7 +49,8 @@
             </div>
         </div>
     </div>
-    <script type="text/javascript" src="js/core/current-hot.js"></script>
+    <!-- 引入云词JS -->
     <script type="text/javascript" src="js/screen/startup-current.js"></script>
+    <script type="text/javascript" src="js/core/current-icloud.js"></script>
 </body>
 </html>

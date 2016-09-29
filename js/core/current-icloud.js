@@ -42,11 +42,11 @@ function getWordCloudData() {
                 var w = originData[i].word.split(" ").slice(0, 2);
                 wordArr = wordArr.concat(w);
             }
-            wordArr = wordArr.slice(0,20);
+            wordArr = wordArr.slice(0, 20);
             for (var j = 0; j < wordArr.length; j++) {
                 transformData.push({
                     name: wordArr[j],
-                    value: Math.floor(Math.random()*1000+1)*(wordArr.length-j),
+                    value: Math.floor(Math.random() * 1000 + 1) * (wordArr.length - j),
                     itemStyle: createRandomItemStyle()
                 })
             }
