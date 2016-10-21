@@ -131,5 +131,12 @@
         "TASKID": "4100",
         "CLUSTERNAME": "provice_1",
         "TITLE": "脱贫"
+    },
+    "001035020": {
+        "HOTPOINTNUM": "5000",
+        "AREA": "001035020",
+        "TASKID": "4100",
+        "CLUSTERNAME": "provice_1",
+        "TITLE": "天府新区核心区域"
     }
 }

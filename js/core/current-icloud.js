@@ -125,6 +125,7 @@ function requireData() {
                 var circle = content.find(".bar .process-bar .circle");
                 var redLine = content.find(".bar .process-bar .line-red");
                 var offsetLeft = (data[index].percentage / 100) * parseInt(content.find(".bar .process-bar .line").css("width"));
+                
                 area.eq(index).text(data[index].area);
                 title.eq(index).text(data[index].title);
                 con.eq(index).text(data[index].content);
