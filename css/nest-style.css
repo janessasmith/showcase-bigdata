@@ -107,6 +107,11 @@ option {
 }
 
 .map-hover-tooltip span {
+	display:block;
+	max-width: 300px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
 	color: #4c4c4c;
 }
 
