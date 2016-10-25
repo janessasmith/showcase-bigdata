@@ -11,6 +11,8 @@ ProxyPassReverse /cdyq  http://125.70.9.212:8005/cdyq
 #chengdu.json
 
 举例：
+```json
+
 {
 	"type": "FeatureCollection",
 	"features": [
@@ -49,6 +51,8 @@ ProxyPassReverse /cdyq  http://125.70.9.212:8005/cdyq
 		}
 	]
 }
+
+```
 
 其中 "cp": [104.103077, 30.660275]，第一个值表示地图显示的字水平位置(数值越大，越往右走)；第二个值表示地图显示的字垂直位置(数值越大，越上上走)；
 
