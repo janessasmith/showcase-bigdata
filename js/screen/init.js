@@ -403,7 +403,7 @@
         {"dictName": "简阳市", "dictNum": "001035020"}
     ];
 
-
+    // mark-point-data提示框的geo位置
     hotInfoVisual.mapArea.geo = {
         "china": [
             {"n": "北京", "g": "116.395645,39.929986"},
