@@ -273,7 +273,7 @@ hotInfoVisual.drawMap = function(mapEle, container, option, parameters, curArea)
                 drawPointData();
             }, 500);
 
-            //
+            // pointData提示框
             function drawPointData() {
                 var markPointDataHtmls = [];
                 var mapAreaGeos = hotInfoVisual.mapArea.geo[option.mapType] || [];
