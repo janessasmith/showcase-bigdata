@@ -313,14 +313,12 @@ h2.y-toptit {
 }
 
 .y-hotcontain {
-	overflow: hidden;
 	padding: 20px;
 	padding-bottom: 0;
 }
 
 .y-hot-lf {
 	float: left;
-	overflow: hidden;
 	width: 63%;
 	margin: 0;
 }
