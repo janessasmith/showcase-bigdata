@@ -5,8 +5,8 @@
 
 反向代理地址：
 
-ProxyPass /cdyq  http://125.70.9.212:8005/cdyq
-ProxyPassReverse /cdyq  http://125.70.9.212:8005/cdyq
+- ProxyPass /cdyq  http://125.70.9.212:8005/cdyq
+- ProxyPassReverse /cdyq  http://125.70.9.212:8005/cdyq
 
 #chengdu.json
 
