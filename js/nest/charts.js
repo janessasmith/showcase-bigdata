@@ -14,7 +14,7 @@ function initStatus() {
  * @param  {[type]} parameters     [description] 传参
  * @return {[type]}                [description]
  */
-function getChartsData(chartContainer, parameters) {
+function getChartsData(chartContainer, parameters, dataUrl) {
 	$.ajax({
 		type: "GET",
 		// 调用外部接口
@@ -22,8 +22,8 @@ function getChartsData(chartContainer, parameters) {
 		data: parameters,*/
 		
 		// 调用本地数据
-		url: "../../data/charts/nest-chart-chengdu.json",
-
+		url: dataUrl,
+		
 		dataType: "json",
 		success: function(data) {
 			// 获取第一组数据
@@ -186,16 +186,26 @@ function getChartsData(chartContainer, parameters) {
 function getProvinceList(container) {
 	$.ajax({
 		type: "GET",
-		url: "/cdyq/client.do",
+		// 调用外部接口
+		/*url: "/cdyq/client.do",
 		data: {
 			"method": "getDoc",
 			"dashboards": "ffe3d5ed-eff5df01-c0c2-037d-e4b072cc",
 			"gadgets": "ffff43c8-6e069e5e-085a-037d-e4b04045",
 			"lableType": "content"
-		},
+		},*/
+
+		// 调用本地数据
+		url: "../../data/charts/nest-province-list.json",
+
 		dataType: "json",
 		success: function(data) {
-			var dataList = JSON.parse(data.result);
+			// 调用外部接口时需要用的
+			/*var dataList = JSON.parse(data.result);*/
+
+			// 本地数据需要用的
+			var dataList = data.result;
+
 			// 城市热度值
 			var cityValues = dataList.records[0].values;
 			// 城市

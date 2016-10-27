@@ -45,6 +45,7 @@ $(function() {
 
                 // 本地数据需要用的
                 var originData = data.result;
+                
                 var transformData = [];
                 var wordArr = [];
                 for (var i = 0; i < originData.length; i++) {
