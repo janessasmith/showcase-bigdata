@@ -17,12 +17,12 @@ function initStatus() {
 function getChartsData(chartContainer, parameters) {
 	$.ajax({
 		type: "GET",
-		// 调用接口
-		url: "/cdyq/client.do",
-		data: parameters,
-
+		// 调用外部接口
+		/*url: "/cdyq/client.do",
+		data: parameters,*/
+		
 		// 调用本地数据
-		// url: "../../data/charts/nest-chart-chengdu.json"
+		url: "../../data/charts/nest-chart-chengdu.json",
 
 		dataType: "json",
 		success: function(data) {

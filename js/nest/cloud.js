@@ -32,13 +32,14 @@ $(function() {
                 "gadgets": "fffa5983-6dfea268-085a-037d-e4b04045",
                 "lableType": "content"
             },
+
             dataType: "json",
             success: function(data) {
                 var originData = JSON.parse(data.result);
                 var transformData = [];
                 var wordArr = [];
                 for (var i = 0; i < originData.length; i++) {
-                    var w = originData[i].word.split(" ").slice(0, 2);
+                    var w = originData[i].word.split("").slice(0, 2);
                     wordArr = wordArr.concat(w);
                 }
                 wordArr = wordArr.slice(0, 20);
@@ -49,7 +50,7 @@ $(function() {
                         itemStyle: createRandomItemStyle()
                     })
                 }
-                //文字云配置参数
+                // 文字云配置参数
                 option = {
                     tooltip: {
                         show: false
