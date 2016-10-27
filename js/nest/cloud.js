@@ -25,17 +25,26 @@ $(function() {
     function getWordCloudData() {
         $.ajax({
             type: "GET",
-            url: "/cdyq/client.do",
+
+            // 调用外部接口
+            /*url: "/cdyq/client.do",
             data: {
                 "method": "getDoc",
                 "dashboards": "ffe3d5ed-eff5df01-c0c2-037d-e4b072cc",
                 "gadgets": "fffa5983-6dfea268-085a-037d-e4b04045",
                 "lableType": "content"
-            },
+            },*/
+
+            // 调用本地数据
+            url: "../../data/cloud/nest-cloud-chengdu.json",
 
             dataType: "json",
             success: function(data) {
-                var originData = JSON.parse(data.result);
+                // 调用外部接口时需要用的
+                /*var originData = JSON.parse(data.result);*/
+
+                // 本地数据需要用的
+                var originData = data.result;
                 var transformData = [];
                 var wordArr = [];
                 for (var i = 0; i < originData.length; i++) {

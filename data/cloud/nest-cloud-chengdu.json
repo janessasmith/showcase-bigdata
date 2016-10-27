@@ -1,0 +1,113 @@
+{
+	"result": [{
+		"word": "交通 民警 手指 执法 阻碍",
+		"rword": null,
+		"wordtype": 0,
+		"wordseg": 0,
+		"wordsen": 0,
+		"wordlen": 0,
+		"pfq": 225,
+		"value": 0.0
+	}, {
+		"word": "班级 贡献 小学 作业 充值",
+		"rword": null,
+		"wordtype": 0,
+		"wordseg": 0,
+		"wordsen": 0,
+		"wordlen": 0,
+		"pfq": 187,
+		"value": 0.0
+	}, {
+		"word": "地铁 珍珠 车门 列车 晚点",
+		"rword": null,
+		"wordtype": 0,
+		"wordseg": 0,
+		"wordsen": 0,
+		"wordlen": 0,
+		"pfq": 173,
+		"value": 0.0
+	}, {
+		"word": "教育局 小学生 寄宿 生活 调查",
+		"rword": null,
+		"wordtype": 0,
+		"wordseg": 0,
+		"wordsen": 0,
+		"wordlen": 0,
+		"pfq": 162,
+		"value": 0.0
+	}, {
+		"word": "楼盘 面积 收入 超出 遏制",
+		"rword": null,
+		"wordtype": 0,
+		"wordseg": 0,
+		"wordsen": 0,
+		"wordlen": 0,
+		"pfq": 149,
+		"value": 0.0
+	}, {
+		"word": "商品房 立案 市场 秩序 整治",
+		"rword": null,
+		"wordtype": 0,
+		"wordseg": 0,
+		"wordsen": 0,
+		"wordlen": 0,
+		"pfq": 99,
+		"value": 0.0
+	}, {
+		"word": "古都 北京 都城 齐名 西安",
+		"rword": null,
+		"wordtype": 0,
+		"wordseg": 0,
+		"wordsen": 0,
+		"wordlen": 0,
+		"pfq": 88,
+		"value": 0.0
+	}, {
+		"word": "车门 列车 晚点 后续 全线",
+		"rword": null,
+		"wordtype": 0,
+		"wordseg": 0,
+		"wordsen": 0,
+		"wordlen": 0,
+		"pfq": 75,
+		"value": 0.0
+	}, {
+		"word": "北京 齐名 西安 成都 古都",
+		"rword": null,
+		"wordtype": 0,
+		"wordseg": 0,
+		"wordsen": 0,
+		"wordlen": 0,
+		"pfq": 69,
+		"value": 0.0
+	}, {
+		"word": "开发商 商品房 公安 立案 市场",
+		"rword": null,
+		"wordtype": 0,
+		"wordseg": 0,
+		"wordsen": 0,
+		"wordlen": 0,
+		"pfq": 59,
+		"value": 0.0
+	}, {
+		"word": "都城 样本 特殊 跻身 成都",
+		"rword": null,
+		"wordtype": 0,
+		"wordseg": 0,
+		"wordsen": 0,
+		"wordlen": 0,
+		"pfq": 52,
+		"value": 0.0
+	}, {
+		"word": "公安 部门 房管 光明 介入",
+		"rword": null,
+		"wordtype": 0,
+		"wordseg": 0,
+		"wordsen": 0,
+		"wordlen": 0,
+		"pfq": 35,
+		"value": 0.0
+	}],
+	"code": 200,
+	"message": "获得消息成功"
+}
