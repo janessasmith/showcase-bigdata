@@ -101,7 +101,7 @@ option {
 
 .map-hover-tooltip li {
 	font-size: 13px;
-	list-style-position: inside;
+	list-style-position: outside;
 	list-style-type: disc;
 	color: #e0592b;
 }
