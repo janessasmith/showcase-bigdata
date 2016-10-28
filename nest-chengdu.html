@@ -17,6 +17,7 @@
     <script type="text/javascript" src="laydate/laydate.js"></script>
     <!-- 嵌套页面常规JS效果 -->
     <script type="text/javascript" src="js/nest/index.js"></script>
+
 </head>
 <body class="body-container">
     <div class="y-container">
@@ -24,9 +25,15 @@
         <div class="y-tophead">
             <h2>成都热点</h2>
             <ul>
-                <li class="topheadact"><a href="#"></a></li>
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
+                <li class="topheadact">
+                    <a href="#"></a>
+                </li>
+                <li>
+                    <a href="#"></a>
+                </li>
+                <li>
+                    <a href="#"></a>
+                </li>
             </ul>
         </div>
         <h2 class="y-toptit">成都热点分布</h2>
@@ -44,8 +51,8 @@
                         <a href="javascript:void(0)" class="panel-close"></a>
                     </div>
                     <div class="content">
-                        <ul>
-                            <li>
+                        <ul id="cdyqnews">
+                            <!-- <li>
                                 <a href="#">网约车合法化,省钱就等于赚钱</a>
                                 <span class="date">1小时前</span>
                                 <span class="y-name">搜狐汽车</span>
@@ -79,7 +86,7 @@
                                 <a href="#">网约车合法化,省钱就等于赚钱</a>
                                 <span class="date">1小时前</span>
                                 <span class="y-name">搜狐汽车</span>
-                            </li>
+                            </li> -->
                         </ul>
                     </div>
                 </div>
@@ -109,8 +116,8 @@
                         <h4>热值</h4>
                     </div>
                     <div class="y-hotscroll">
-                        <ul class="y-hotscrollul">
-                            <li>
+                        <ul class="y-hotscrollul" id="hotnews">
+                            <!-- <li>
                                 <a href="#">北医三院“问题气体致盲”：事发10个月原因仍不明</a>
                                 <span>114</span>
                             </li>
@@ -173,7 +180,7 @@
                             <li>
                                 <a href="#">打打电话，为何能骗走百亿钱款？</a>
                                 <span>58</span>
-                            </li>
+                            </li> -->
                         </ul>
                     </div>
                 </div>
@@ -204,8 +211,8 @@
                         <p>微博涉成都</p>
                         <span class="sj"></span>
                         <ul id="y-hot-tab">
-                            <li>微信涉成都</li>
                             <li class="hotact">微博涉成都</li>
+                            <li>微信涉成都</li>
                             <li>新闻涉成都</li>
                         </ul>
                     </div>
@@ -213,12 +220,15 @@
                 </div>
                 <div class="content" id="y-hot-tabcon">
                     <!-- tab切换1 -->
-                    <div class="y-tabcon">
-                        <div class="y-blog-item">
+                    <div class="y-tabcon" id="cdyqweibo">
+                        <!-- <div class="y-blog-item">
                             <div class="pic">
-                                <img src="images/y-userpic.jpg"></div>
+                                <img src="images/y-userpic.jpg">
+                            </div>
                             <div class="info">
-                                <h4><a href="#">新浪新闻</a></h4>
+                                <h4>
+                                    <a href="#">新浪新闻</a>
+                                </h4>
                                 <p>
                                     2016年7月29日 - 原标题:网约车合法了出租汽车改革和专车新政亮相私家车条件7座及以下乘用车;安装具有行驶记录功能的车辆卫星定位装置、应急报警装置;车辆技术
                                 </p>
@@ -232,7 +242,9 @@
                             <div class="pic">
                                 <img src="images/y-userpic.jpg"></div>
                             <div class="info">
-                                <h4><a href="#">新浪新闻</a></h4>
+                                <h4>
+                                    <a href="#">新浪新闻</a>
+                                </h4>
                                 <p>
                                     2016年7月29日 - 原标题:网约车合法了出租汽车改革和专车新政亮相私家车条件7座及以下乘用车;安装具有行驶记录功能的车辆卫星定位装置、应急报警装置;车辆技术
                                 </p>
@@ -246,7 +258,9 @@
                             <div class="pic">
                                 <img src="images/y-userpic.jpg"></div>
                             <div class="info">
-                                <h4><a href="#">新浪新闻</a></h4>
+                                <h4>
+                                    <a href="#">新浪新闻</a>
+                                </h4>
                                 <p>
                                     2016年7月29日 - 原标题:网约车合法了出租汽车改革和专车新政亮相私家车条件7座及以下乘用车;安装具有行驶记录功能的车辆卫星定位装置、应急报警装置;车辆技术
                                 </p>
@@ -255,15 +269,17 @@
                                     <span>2016-08-12 18:45:25</span>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                     <!-- tab切换2 -->
-                    <div class="y-tabcon" style="display: none;">
-                        <div class="y-blog-item">
+                    <div class="y-tabcon" id="cdyqweixin" style="display: none;">
+                        <!-- <div class="y-blog-item">
                             <div class="pic">
                                 <img src="images/y-userpic.jpg"></div>
                             <div class="info">
-                                <h4><a href="#">新浪新闻</a></h4>
+                                <h4>
+                                    <a href="#">新浪新闻</a>
+                                </h4>
                                 <p>
                                     2016年7月29日 - 原标题:网约车合法了出租汽车改革和专车新政亮相私家车条件7座及以下乘用车;安装具有行驶记录功能的车辆卫星定位装置、应急报警装置;车辆技术
                                 </p>
@@ -277,7 +293,9 @@
                             <div class="pic">
                                 <img src="images/y-userpic.jpg"></div>
                             <div class="info">
-                                <h4><a href="#">新浪新闻</a></h4>
+                                <h4>
+                                    <a href="#">新浪新闻</a>
+                                </h4>
                                 <p>
                                     2016年7月29日 - 原标题:网约车合法了出租汽车改革和专车新政亮相私家车条件7座及以下乘用车;安装具有行驶记录功能的车辆卫星定位装置、应急报警装置;车辆技术
                                 </p>
@@ -286,15 +304,17 @@
                                     <span>2016-08-12 18:45:25</span>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                     <!-- tab切换3 -->
-                    <div class="y-tabcon" style="display: none;">
-                        <div class="y-blog-item">
+                    <div class="y-tabcon" id="cdqyquanguonews" style="display: none;">
+                        <!-- <div class="y-blog-item">
                             <div class="pic">
                                 <img src="images/y-userpic.jpg"></div>
                             <div class="info">
-                                <h4><a href="#">新浪新闻</a></h4>
+                                <h4>
+                                    <a href="#">新浪新闻</a>
+                                </h4>
                                 <p>
                                     2016年7月29日 - 原标题:网约车合法了出租汽车改革和专车新政亮相私家车条件7座及以下乘用车;安装具有行驶记录功能的车辆卫星定位装置、应急报警装置;车辆技术
                                 </p>
@@ -308,7 +328,9 @@
                             <div class="pic">
                                 <img src="images/y-userpic.jpg"></div>
                             <div class="info">
-                                <h4><a href="#">新浪新闻</a></h4>
+                                <h4>
+                                    <a href="#">新浪新闻</a>
+                                </h4>
                                 <p>
                                     2016年7月29日 - 原标题:网约车合法了出租汽车改革和专车新政亮相私家车条件7座及以下乘用车;安装具有行驶记录功能的车辆卫星定位装置、应急报警装置;车辆技术
                                 </p>
@@ -322,14 +344,16 @@
                             <div class="pic">
                                 <img src="images/y-userpic.jpg"></div>
                             <div class="info">
-                                <h4><a href="#">新浪新闻</a></h4>
+                                <h4>
+                                    <a href="#">新浪新闻</a>
+                                </h4>
                                 <p>2016年7月29日 - 原标题:网约车合法了出租、应急报警装置;车辆技术</p>
                                 <div class="from">
                                     <span>来自新浪微博</span>
                                     <span>2016-08-12 18:45:25</span>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>

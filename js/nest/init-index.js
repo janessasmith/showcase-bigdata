@@ -1,4 +1,5 @@
-(function () {
+// 地图配置
+(function() {
     var hotInfoVisual = {};
     window.hotInfoVisual = hotInfoVisual;
 
@@ -186,7 +187,7 @@
             {"n": "简阳市", "g": "104.550339,30.380666"}
         ]
     };
-    
+
     // 获取全国地图
     hotInfoVisual.quanQuoPanel = {
         tag: "quanGuo",
@@ -271,3 +272,226 @@
         }
     });
 })();
+
+// 成都热点页面数据调用
+$(function() {
+    var token = "";
+    var code = "";
+
+    function getUrlParam(name) {
+        // 构造一个含有目标参数的正则表达式对象  
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+        // 匹配目标参数    
+        var r = window.location.search.substr(1).match(reg);
+        // 返回参数值   
+        if (r != null) return unescape(r[2]);
+        return null;
+    }
+
+    $(document).ready(function() {
+        getHotDoc();
+        getCNews();
+        getWeibo();
+        getWeixin();
+        getQuanguoNews();
+    });
+
+    function getToken() {
+        var clientId = "1c10bae9-bb7b-4e89-9ba7-6385f2ced2b0";
+        var clientSecret = "f5bd88a77923b4d570b97887d963b008958bbef3";
+        code = getUrlParam("code");
+        if (code == null || code == "") {
+            location = "http://www.smas.cn/oauth/authorize?client_id=" + clientId + "&response_type=code&redirect_uri=http://125.70.9.212:8005/cdyq/web/BigData/cdindex.jsp";
+        } else {
+            getHotDoc();
+            getCNews();
+            getWeibo();
+            getWeixin();
+            getQuanguoNews();
+        }
+
+    }
+
+    // 成都热点信息数据获取
+    function getHotDoc() {
+        var html = "";
+        $.ajax({
+            type: "POST",
+            url: "http://125.70.9.212:8005/cdyq/client.do?method=getDoc",
+            dataType: "json",
+            async: false,
+            data: {
+                code: "code",
+                toekn: "token",
+                lableType: "content",
+                redirect: window.location.origin + window.location.pathname,
+                dashboards: "ffe3d5ed-eff5df01-c0c2-037d-e4b072cc",
+                gadgets: "ffe3deb9-eff5faba-ca60-037d-e4b072cc"
+            },
+            success: function(data) {
+                if (data.code == 200) {
+                    var _json = JSON.parse(data.result);
+                    var _node = $("#hotnews");
+                    _node.empty();
+                    $.each(_json, function(i, item) {
+                        // console.log(item);
+                        html += "<li>";
+                        html += "<a href='" + item.urlname + "' target='_blank'>" + item.urltitle + "</a>";
+                        html += "<span>" + item.similarcount + "</span>";
+                        html += "</li>";
+                    });
+                    _node.html(html);
+                }
+            }
+        });
+    }
+
+    // 成都舆情新闻
+    function getCNews() {
+        var html = "";
+        $.ajax({
+            type: "POST",
+            url: "http://125.70.9.212:8005/cdyq/client.do?method=getDoc",
+
+            dataType: "json",
+            data: {
+                code: code,
+                toekn: token,
+                lableType: "docs",
+                redirect: window.location.origin + window.location.pathname,
+                dashboards: "ffe3d5ed-eff5df01-c0c2-037d-e4b072cc",
+                gadgets: "ffe3e1ac-eff622f2-ca60-037d-e4b072cc"
+            },
+            success: function(data) {
+                if (data.code == 200) {
+                    var _json = JSON.parse(data.result);
+                    var _jsonArr = _json.pageitems;
+                    var _node = $("#cdyqnews");
+                    _node.empty();
+                    $.each(_jsonArr, function(i, item) {
+                        html += "<li>";
+                        html += "<a href='//" + item.urlname + "' target='_blank'>" + item.urltitle + "</a>";
+                        html += "<span class='date'>" + item.urltime + "</span>";
+                        html += "<span class='y-name'>" + item.sitename + "</span>";
+                        html += "</li>";
+                    });
+                    _node.html(html);
+                }
+            }
+        });
+    }
+
+    // 微博涉成都
+    function getWeibo() {
+        var html = "";
+        $.ajax({
+            type: "POST",
+            url: "http://125.70.9.212:8005/cdyq/client.do?method=getDoc",
+
+            dataType: "json",
+            data: {
+                code: code,
+                toekn: token,
+                lableType: "statuses",
+                redirect: window.location.origin + window.location.pathname,
+                dashboards: "ffe3d5ed-eff5df01-c0c2-037d-e4b072cc",
+                gadgets: "ffe3eac2-eff65012-ca60-037d-e4b072cc"
+            },
+            success: function(data) {
+                if (data.code == 200) {
+                    var _json = JSON.parse(data.result);
+                    var _jsonArr = _json.pageitems;
+                    // console.log(_jsonArr);
+                    var _node = $("#cdyqweibo");
+                    _node.empty();
+                    $.each(_jsonArr, function(i, item) {
+                        html += "<div class='y-blog-item'><div class='pic'><img src='images/y-userpic.jpg'></div>";
+                        html += "<div class='info'><h4><a href='"+ item.url +"' target='_blank'>"+ item.uname +"</a></h4>";
+
+                        html += "<p>"+ item.content +"</p>";
+                        html += "<div class='from'><span>来自"+ item.via +"</span><span>"+ item.loadtime +"</span></div>";
+                        html += "</div>";
+                        html += "</div>";
+                    });
+                    _node.html(html);
+                }
+            }
+        });
+    }
+
+    // 微信涉成都
+    function getWeixin() {
+        var html = "";
+        $.ajax({
+            type: "POST",
+            url: "http://125.70.9.212:8005/cdyq/client.do?method=getDoc",
+
+            dataType: "json",
+            data: {
+                code        :code,
+                toekn        :token,
+                lableType    :"docs",
+                redirect     :window.location.origin+window.location.pathname,
+                dashboards   :"ffe3d5ed-eff5df01-c0c2-037d-e4b072cc",
+                gadgets      :"ffe3dc76-eff5f6c0-ca60-037d-e4b072cc"
+            },
+            success: function(data) {
+                if (data.code == 200) {
+                    var _json = JSON.parse(data.result);
+                    var _jsonArr = _json.pageitems;
+                    // console.log(_jsonArr);
+                    var _node = $("#cdyqweixin");
+                    _node.empty();
+                    $.each(_jsonArr, function(i, item) {
+                        html += "<div class='y-blog-item'>";
+                        html += "<div class='info'><h4><a href='"+ item.urlname +"' target='_blank'>"+ item.urltitle +"</a></h4>";
+
+                        html += "<p>"+ item.abstracts +"</p>";
+                        html += "<div class='from'><span>"+ item.theme +"</span><span>"+ item.urltime +"</span></div>";
+                        html += "</div>";
+                        html += "</div>";
+                    });
+                    _node.html(html);
+                }
+            }
+        });
+    }
+
+    // 新闻涉成都
+    function getQuanguoNews() {
+        var html = "";
+        $.ajax({
+            type: "POST",
+            url: "http://125.70.9.212:8005/cdyq/client.do?method=getDoc",
+
+            dataType: "json",
+            data: {
+                code: code,
+                toekn: token,
+                lableType: "docs",
+                redirect: window.location.origin + window.location.pathname,
+                dashboards: "ffe3d5ed-eff5df01-c0c2-037d-e4b072cc",
+                gadgets: "ffe3deb9-eff5faba-ca60-037d-e4b072cc"
+            },
+            success: function(data) {
+                if (data.code == 200) {
+                    var _json = JSON.parse(data.result);
+                    var _jsonArr = _json.pageitems;
+                    // console.log(_jsonArr);
+                    var _node = $("#cdqyquanguonews");
+                    _node.empty();
+                    $.each(_jsonArr, function(i, item) {
+                        html += "<div class='y-blog-item'>";
+                        html += "<div class='info'><h4><a href='"+ item.urlname +"' target='_blank'>"+ item.urltitle +"</a></h4>";
+
+                        html += "<p>"+ item.abstracts +"</p>";
+                        html += "<div class='from'><span>"+ item.theme +"</span><span>"+ item.urltime +"</span></div>";
+                        html += "</div>";
+                        html += "</div>";
+                    });
+                    _node.html(html);
+                }
+            }
+        });
+    }
+});

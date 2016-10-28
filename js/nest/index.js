@@ -1,14 +1,14 @@
 $(document).ready(function() {
     // 成都热点-各行换色
     $("ul.y-hotscrollul li:even").css('background', '#fff');
-    //数据上下滚动
+    // 数据上下滚动
     var myar = setInterval('autoScroll(".y-hotscroll")', 2000);
     $(".y-hotscroll").hover(function() {
         clearInterval(myar);
     }, function() {
         myar = setInterval('autoScroll(".y-hotscroll")', 2000)
     });
-    //下拉切换
+    // 下拉切换
     $(".y-panel-select .y-select p").siblings().hide();
     $(".y-panel-select .y-select p").click(function(e) {
         stopPropagation(e);
@@ -30,7 +30,7 @@ $(document).ready(function() {
     $(document).click(function() {
         $(".y-panel-select .y-select p").siblings().hide();
     });
-    //点击关闭按钮，整个div移除
+    // 点击关闭按钮，整个div移除
     $(".y-panel-pub a.panel-close").click(function() {
             $(this).parent().parent(".y-panel-pub").remove();
         })
@@ -51,9 +51,9 @@ $(document).ready(function() {
             $(".y-hotncontain").css('width', '36%');
         }
     });
-    //专题事件-微博热议-字数限制
+    // 专题事件-微博热议-字数限制
     hidden_char($(".yz-panel-bloghot .y-blog-item > .info p"), 80);
-    //专题列表新建弹出框新增
+    // 专题列表新建弹出框新增
     $("#yz-dialog-add").click(function() {
             if ($("#yza-dialog").is(":hidden")) {
                 $("#yza-dialog").show();
@@ -65,7 +65,7 @@ $(document).ready(function() {
     })
 })
 
-//上下滚动
+// 上下滚动
 function autoScroll(obj) {
     $(obj).find("ul").animate({
         marginTop: "-36px"
@@ -75,7 +75,7 @@ function autoScroll(obj) {
         }).find("li:first").appendTo(this);
     })
 }
-//阻止冒泡
+// 阻止冒泡
 function stopPropagation(e) {
     if (e.stopPropagation) {
         e.stopPropagation();
@@ -83,7 +83,7 @@ function stopPropagation(e) {
         e.cancelBubble = true;
     }
 }
-//多行字数限制
+// 多行字数限制
 function hidden_char(node, show) {
     for (var i = 0; i < node.length; i++) {
         var node_str = node[i].innerHTML;
